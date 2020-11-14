@@ -42,8 +42,5 @@ public class UserLogMapReduceJob {
 
 
     public static void main(String[] args) {
-        List<String> timestampList = Lists.newArrayList("0", "23", "123");
-        List<String> collect = timestampList.stream().sorted((o1, o2) -> (int) (Long.parseLong(o2) - Long.parseLong(o1))).collect(Collectors.toList());
-        System.out.println(collect.toString());
     }
 }
