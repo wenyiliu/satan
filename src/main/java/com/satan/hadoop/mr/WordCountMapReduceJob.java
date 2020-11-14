@@ -2,6 +2,7 @@ package com.satan.hadoop.mr;
 
 import com.google.common.collect.Lists;
 import com.satan.hadoop.config.HadoopConfiguration;
+import com.satan.hadoop.model.param.RunJobParam;
 import com.satan.hadoop.utils.CommonUtil;
 import com.satan.hadoop.utils.MapReduceUtil;
 import org.apache.commons.lang3.StringUtils;
@@ -25,7 +26,7 @@ public class WordCountMapReduceJob {
 
     private static final Logger LOG = LoggerFactory.getLogger(WordCountMapReduceJob.class);
 
-    public static class WordMap extends Mapper<LongWritable, Text, Text, IntWritable> {
+    public static class WordCountMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
         @Override
         protected void map(LongWritable key, Text value, final Context context) {
             String textValue = value.toString();
@@ -43,7 +44,7 @@ public class WordCountMapReduceJob {
         }
     }
 
-    public static class WordReduce extends Reducer<Text, IntWritable, Text, LongWritable> {
+    public static class WordCountReducer extends Reducer<Text, IntWritable, Text, LongWritable> {
         @Override
         protected void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
             long count = 0L;
@@ -55,19 +56,18 @@ public class WordCountMapReduceJob {
     }
 
     public static void runJob(String inputPath, String outputPath) throws Exception {
-        MapReduceUtil.dealPath(inputPath, outputPath);
-        Job job = Job.getInstance(HadoopConfiguration.getConfiguration());
-        job.setJarByClass(WordCountMapReduceJob.class);
-        job.setMapperClass(WordMap.class);
-        job.setReducerClass(WordReduce.class);
-
-        job.setMapOutputKeyClass(Text.class);
-        job.setMapOutputValueClass(IntWritable.class);
-
-        job.setOutputKeyClass(Text.class);
-        job.setOutputValueClass(LongWritable.class);
-
-        MapReduceUtil.doRunJob(inputPath, outputPath, job);
+        RunJobParam build = RunJobParam.builder()
+                .inputPath(inputPath)
+                .outputPath(outputPath)
+                .jarClass(WordCountMapReduceJob.class)
+                .mapperClass(WordCountMapper.class)
+                .mapOutputKeyClass(Text.class)
+                .mapOutputValueClass(IntWritable.class)
+                .reducerClass(WordCountReducer.class)
+                .outputKeyClass(Text.class)
+                .outputValueClass(LongWritable.class)
+                .build();
+        MapReduceUtil.runJob(build);
     }
 
     public static void main(String[] args) throws Exception {
