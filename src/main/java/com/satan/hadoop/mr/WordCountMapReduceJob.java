@@ -1,7 +1,6 @@
 package com.satan.hadoop.mr;
 
 import com.google.common.collect.Lists;
-import com.satan.hadoop.config.HadoopConfiguration;
 import com.satan.hadoop.model.param.RunJobParam;
 import com.satan.hadoop.utils.CommonUtil;
 import com.satan.hadoop.utils.MapReduceUtil;
@@ -9,7 +8,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
-import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.Reducer;
 import org.slf4j.Logger;
@@ -71,8 +69,8 @@ public class WordCountMapReduceJob {
     }
 
     public static void main(String[] args) throws Exception {
-        String inputPath = "/user/root/mr/word_count/input.txt";
-        String outputPath = "/user/root/mr/word_count/output.txt";
+        String inputPath = "/user/root/mr/word_count/input";
+        String outputPath = "/user/root/mr/word_count/output";
         if (args.length >= 2) {
             inputPath = args[0];
             outputPath = args[1];

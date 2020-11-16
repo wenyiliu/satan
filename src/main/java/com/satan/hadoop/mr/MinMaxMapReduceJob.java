@@ -2,9 +2,6 @@ package com.satan.hadoop.mr;
 
 import com.satan.hadoop.config.HadoopConfiguration;
 import com.satan.hadoop.utils.MapReduceUtil;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
@@ -68,7 +65,7 @@ public class MinMaxMapReduceJob {
 
     public static void runJob(String inputPath, String outputPath) throws Exception {
         MapReduceUtil.dealPath(inputPath, outputPath);
-        Configuration configuration = HadoopConfiguration.getConfiguration();
+        org.apache.hadoop.conf.Configuration configuration = HadoopConfiguration.getConfiguration();
         Job job = Job.getInstance(configuration);
         job.setJarByClass(MinMaxMapReduceJob.class);
         job.setMapperClass(MinMaxMapper.class);

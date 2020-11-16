@@ -8,6 +8,7 @@ import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.Writable;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Partitioner;
 import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
@@ -18,6 +19,7 @@ import java.util.Objects;
  * @author liuwenyi
  * @date 2020/11/10
  */
+@SuppressWarnings("rawtypes")
 public class MapReduceUtil {
 
     public static void dealPath(String inputPath, String outputPath) throws Exception {
@@ -52,13 +54,17 @@ public class MapReduceUtil {
                            Class<? extends Writable> mapOutputKeyClass,
                            Class<? extends Writable> mapOutputValueClass,
                            Class<? extends Writable> outputKeyClass,
-                           Class<? extends Writable> outputValueClass) throws Exception {
+                           Class<? extends Writable> outputValueClass,
+                           Class<? extends Partitioner> partitionClass) throws Exception {
         Job job = Job.getInstance(HadoopConfiguration.getConfiguration());
         job.setJarByClass(jarClass);
         job.setMapperClass(mapperClass);
         job.setReducerClass(reducerClass);
         if (Objects.nonNull(combiner)) {
             job.setCombinerClass(combiner);
+        }
+        if (Objects.nonNull(partitionClass)) {
+            job.setPartitionerClass(partitionClass);
         }
         job.setMapOutputKeyClass(mapOutputKeyClass);
         job.setMapOutputValueClass(mapOutputValueClass);
@@ -77,7 +83,7 @@ public class MapReduceUtil {
                           Class<? extends Writable> outputKeyClass,
                           Class<? extends Writable> outputValueClass) throws Exception {
         return job(jarClass, mapperClass, reducerClass, null, mapOutputKeyClass, mapOutputValueClass,
-                outputKeyClass, outputValueClass);
+                outputKeyClass, outputValueClass, null);
     }
 
 
@@ -88,7 +94,7 @@ public class MapReduceUtil {
         dealPath(param.getInputPath(), param.getOutputPath());
         Job job = job(param.getJarClass(), param.getMapperClass(), param.getReducerClass(), param.getCombinerClass(),
                 param.getMapOutputKeyClass(), param.getMapOutputValueClass(), param.getOutputKeyClass(),
-                param.getOutputValueClass());
+                param.getOutputValueClass(),param.getPartitionClass());
         if (Objects.nonNull(param.getJobName())) {
             job.setJobName(param.getJobName());
         }

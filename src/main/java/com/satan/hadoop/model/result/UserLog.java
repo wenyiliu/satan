@@ -1,4 +1,4 @@
-package com.satan.hadoop.model;
+package com.satan.hadoop.model.result;
 
 import org.apache.hadoop.io.Writable;
 

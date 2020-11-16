@@ -2,35 +2,43 @@ package com.satan.hadoop.model.param;
 
 import org.apache.hadoop.io.Writable;
 import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Partitioner;
 import org.apache.hadoop.mapreduce.Reducer;
 
 /**
  * @author liuwenyi
  * @date 2020/11/14
  */
+@SuppressWarnings("rawtypes")
 public class RunJobParam {
 
-    private String inputPath;
+    private final String inputPath;
 
-    private String outputPath;
+    private final String outputPath;
 
-    private String jobName;
+    private final String jobName;
 
-    private Class<?> jarClass;
+    private final Class<?> jarClass;
 
-    private Class<? extends Mapper> mapperClass;
+    private final Class<? extends Mapper> mapperClass;
 
-    private Class<? extends Reducer> reducerClass;
+    private final Class<? extends Reducer> reducerClass;
 
-    private Class<? extends Reducer> combinerClass;
+    private final Class<? extends Reducer> combinerClass;
 
-    private Class<? extends Writable> mapOutputKeyClass;
+    private final Class<? extends Writable> mapOutputKeyClass;
 
-    private Class<? extends Writable> mapOutputValueClass;
+    private final Class<? extends Writable> mapOutputValueClass;
 
-    private Class<? extends Writable> outputKeyClass;
+    private final Class<? extends Writable> outputKeyClass;
 
-    private Class<? extends Writable> outputValueClass;
+    private final Class<? extends Writable> outputValueClass;
+
+    private final Class<? extends Partitioner> partitionClass;
+
+    public Class<? extends Partitioner> getPartitionClass() {
+        return partitionClass;
+    }
 
     public String getInputPath() {
         return inputPath;
@@ -87,7 +95,8 @@ public class RunJobParam {
                         Class<? extends Writable> mapOutputKeyClass,
                         Class<? extends Writable> mapOutputValueClass,
                         Class<? extends Writable> outputKeyClass,
-                        Class<? extends Writable> outputValueClass) {
+                        Class<? extends Writable> outputValueClass,
+                        Class<? extends Partitioner> partitionClass) {
         this.inputPath = inputPath;
         this.outputPath = outputPath;
         this.jobName = jobName;
@@ -99,6 +108,7 @@ public class RunJobParam {
         this.mapOutputValueClass = mapOutputValueClass;
         this.outputKeyClass = outputKeyClass;
         this.outputValueClass = outputValueClass;
+        this.partitionClass = partitionClass;
     }
 
     public static class Builder {
@@ -125,6 +135,7 @@ public class RunJobParam {
 
         private Class<? extends Writable> outputValueClass;
 
+        private Class<? extends Partitioner> partitionClass;
 
         public Builder() {
         }
@@ -184,9 +195,14 @@ public class RunJobParam {
             return this;
         }
 
+        public Builder partitionClass(Class<? extends Partitioner> partitionClass) {
+            this.partitionClass = partitionClass;
+            return this;
+        }
+
         public RunJobParam build() {
             return new RunJobParam(inputPath, outputPath, jobName, jarClass, mapperClass, reducerClass, combinerClass,
-                    mapOutputKeyClass, mapOutputValueClass, outputKeyClass, outputValueClass);
+                    mapOutputKeyClass, mapOutputValueClass, outputKeyClass, outputValueClass, partitionClass);
         }
     }
 }
