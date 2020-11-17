@@ -1,7 +1,6 @@
 package com.satan.hadoop.mr;
 
 import com.satan.hadoop.config.HadoopConfiguration;
-import com.satan.hadoop.model.param.RunJobParam;
 import com.satan.hadoop.model.result.ConsumerBO;
 import com.satan.hadoop.utils.MapReduceUtil;
 import org.apache.hadoop.io.LongWritable;
@@ -18,7 +17,7 @@ import java.util.Objects;
  * @author liuwenyi
  * @date 2020/11/15
  */
-public class MapReduceConsumerJob {
+public class ConsumerMapReduceJob {
 
 
     public static class ConsumerMapper extends Mapper<LongWritable, Text, Text, ConsumerBO> {
@@ -101,7 +100,7 @@ public class MapReduceConsumerJob {
         MapReduceUtil.dealPath(inputPath, outputPath);
         Job job = Job.getInstance(HadoopConfiguration.getConfiguration());
         job.setJobName("consumer");
-        job.setJarByClass(MapReduceConsumerJob.class);
+        job.setJarByClass(ConsumerMapReduceJob.class);
         job.setMapperClass(ConsumerMapper.class);
         job.setMapOutputKeyClass(Text.class);
         job.setMapOutputValueClass(ConsumerBO.class);

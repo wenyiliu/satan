@@ -59,7 +59,9 @@ public class MapReduceUtil {
         Job job = Job.getInstance(HadoopConfiguration.getConfiguration());
         job.setJarByClass(jarClass);
         job.setMapperClass(mapperClass);
-        job.setReducerClass(reducerClass);
+        if (Objects.nonNull(reducerClass)) {
+            job.setReducerClass(reducerClass);
+        }
         if (Objects.nonNull(combiner)) {
             job.setCombinerClass(combiner);
         }
@@ -68,10 +70,12 @@ public class MapReduceUtil {
         }
         job.setMapOutputKeyClass(mapOutputKeyClass);
         job.setMapOutputValueClass(mapOutputValueClass);
-
-        job.setOutputKeyClass(outputKeyClass);
-        job.setOutputValueClass(outputValueClass);
-        // 设置作业输入文件和输出文件的路径
+        if (Objects.nonNull(outputKeyClass)) {
+            job.setOutputKeyClass(outputKeyClass);
+        }
+        if (Objects.nonNull(outputValueClass)) {
+            job.setOutputValueClass(outputValueClass);
+        }
         return job;
     }
 
@@ -94,7 +98,7 @@ public class MapReduceUtil {
         dealPath(param.getInputPath(), param.getOutputPath());
         Job job = job(param.getJarClass(), param.getMapperClass(), param.getReducerClass(), param.getCombinerClass(),
                 param.getMapOutputKeyClass(), param.getMapOutputValueClass(), param.getOutputKeyClass(),
-                param.getOutputValueClass(),param.getPartitionClass());
+                param.getOutputValueClass(), param.getPartitionClass());
         if (Objects.nonNull(param.getJobName())) {
             job.setJobName(param.getJobName());
         }
