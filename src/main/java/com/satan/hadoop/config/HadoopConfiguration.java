@@ -16,6 +16,7 @@ public class HadoopConfiguration {
     private static volatile Configuration configuration;
 
     private static final String HDFS_URL_NAME = "fs.defaultFS";
+
     private static final String DFS_CLIENT_USE_DATANODE_HOSTNAME = "dfs.client.use.datanode.hostname";
 
 

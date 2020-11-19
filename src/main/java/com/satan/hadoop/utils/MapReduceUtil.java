@@ -44,7 +44,7 @@ public class MapReduceUtil {
         // 将作业提交到群集并等待它完成，参数设置为 true 代表打印显示对应的进度
         boolean result = job.waitForCompletion(true);
         // 根据作业结果,终止当前运行的 Java 虚拟机,退出程序
-        System.exit(result ? 0 : -1);
+//        System.exit(result ? 0 : -1);
     }
 
     private static Job job(Class<?> jarClass,
