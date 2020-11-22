@@ -1,5 +1,6 @@
 package com.satan.hadoop.model.result;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

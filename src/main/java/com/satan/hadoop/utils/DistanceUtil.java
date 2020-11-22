@@ -2,6 +2,8 @@ package com.satan.hadoop.utils;
 
 import org.apache.commons.lang3.math.NumberUtils;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -22,13 +24,15 @@ public class DistanceUtil {
     public static double euclideanDistance(String[] d1, String[] d2) {
         double distance = 0;
         if (d1.length == 0 || d2.length == 0) {
-            return 0.0;
+            return Double.MAX_VALUE;
         }
         int minLen = Math.min(d1.length, d2.length);
         for (int i = 0; i < minLen; i++) {
             distance += Math.pow((NumberUtils.toDouble(d1[i]) - NumberUtils.toDouble(d2[i])), 2);
         }
-        return Math.sqrt(distance);
+        return BigDecimal.valueOf(Math.sqrt(distance))
+                .setScale(2, RoundingMode.UP)
+                .doubleValue();
     }
 
     /**
@@ -40,7 +44,7 @@ public class DistanceUtil {
      */
     public static double jackardDistance(String[] d1, String[] d2) {
         if (d1.length == 0 || d2.length == 0) {
-            return 0.0;
+            return Double.MAX_VALUE;
         }
         List<String> d1List = new ArrayList<>(d1.length << 1);
         Collections.addAll(d1List, d1);
@@ -64,7 +68,7 @@ public class DistanceUtil {
      */
     public static double cosDistance(String[] d1, String[] d2) {
         if (d1.length == 0 || d2.length == 0) {
-            return 0.0;
+            return Double.MAX_VALUE;
         }
         double molecular = 0;
         double denominator1 = 0;
@@ -78,7 +82,7 @@ public class DistanceUtil {
             denominator2 += Math.pow(v2, 2);
         }
         if (molecular == 0) {
-            return 0.0;
+            return Double.MAX_VALUE;
         }
         return molecular / Math.sqrt(denominator1 * denominator2);
     }

@@ -1,0 +1,12 @@
+2020-11-20 12:40:59  [ Thread-2:41408 ] - [ ERROR ]  Failed to close inode 29185
+java.io.IOException: Failed to replace a bad datanode on the existing pipeline due to no more good datanodes being available to try. (Nodes: current=[DatanodeInfoWithStorage[172.16.244.144:50010,DS-de009a19-f06b-42e8-8e88-0ffc39f5f26d,DISK]], original=[DatanodeInfoWithStorage[172.16.244.144:50010,DS-de009a19-f06b-42e8-8e88-0ffc39f5f26d,DISK]]). The current failed datanode replacement policy is DEFAULT, and a client may configure this via 'dfs.client.block.write.replace-datanode-on-failure.policy' in its configuration.
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.findNewDatanode(DFSOutputStream.java:925)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.addDatanode2ExistingPipeline(DFSOutputStream.java:988)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.setupPipelineForAppendOrRecovery(DFSOutputStream.java:1156)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:454)
+2020-11-20 13:35:25  [ Thread-19:31949 ] - [ ERROR ]  Failed to close inode 30475
+java.io.IOException: Failed to replace a bad datanode on the existing pipeline due to no more good datanodes being available to try. (Nodes: current=[DatanodeInfoWithStorage[172.16.244.144:50010,DS-de009a19-f06b-42e8-8e88-0ffc39f5f26d,DISK]], original=[DatanodeInfoWithStorage[172.16.244.144:50010,DS-de009a19-f06b-42e8-8e88-0ffc39f5f26d,DISK]]). The current failed datanode replacement policy is DEFAULT, and a client may configure this via 'dfs.client.block.write.replace-datanode-on-failure.policy' in its configuration.
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.findNewDatanode(DFSOutputStream.java:925)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.addDatanode2ExistingPipeline(DFSOutputStream.java:988)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.setupPipelineForAppendOrRecovery(DFSOutputStream.java:1156)
+	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:454)

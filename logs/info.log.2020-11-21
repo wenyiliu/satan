@@ -1,0 +1,328 @@
+2020-11-21 22:02:20  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2020-11-21 22:02:21  [ main:815 ] - [ INFO ]  session.id is deprecated. Instead, use dfs.metrics.session-id
+2020-11-21 22:02:21  [ main:816 ] - [ INFO ]  Initializing JVM Metrics with processName=JobTracker, sessionId=
+2020-11-21 22:02:21  [ main:1035 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2020-11-21 22:02:21  [ main:1044 ] - [ WARN ]  No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2020-11-21 22:02:21  [ main:1065 ] - [ INFO ]  Total input paths to process : 1
+2020-11-21 22:02:21  [ main:1148 ] - [ INFO ]  number of splits:1
+2020-11-21 22:02:21  [ main:1221 ] - [ INFO ]  Submitting tokens for job: job_local591495832_0001
+2020-11-21 22:02:21  [ main:1321 ] - [ INFO ]  The url to track the job: http://localhost:8080/
+2020-11-21 22:02:21  [ main:1322 ] - [ INFO ]  Running job: job_local591495832_0001
+2020-11-21 22:02:21  [ Thread-18:1323 ] - [ INFO ]  OutputCommitter set in config null
+2020-11-21 22:02:21  [ Thread-18:1327 ] - [ INFO ]  File Output Committer Algorithm version is 1
+2020-11-21 22:02:21  [ Thread-18:1328 ] - [ INFO ]  OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2020-11-21 22:02:21  [ Thread-18:1373 ] - [ INFO ]  Waiting for map tasks
+2020-11-21 22:02:21  [ LocalJobRunner Map Task Executor #0:1373 ] - [ INFO ]  Starting task: attempt_local591495832_0001_m_000000_0
+2020-11-21 22:02:22  [ LocalJobRunner Map Task Executor #0:1394 ] - [ INFO ]  File Output Committer Algorithm version is 1
+2020-11-21 22:02:22  [ LocalJobRunner Map Task Executor #0:1402 ] - [ INFO ]  ProcfsBasedProcessTree currently is supported only on Linux.
+2020-11-21 22:02:22  [ LocalJobRunner Map Task Executor #0:1402 ] - [ INFO ]   Using ResourceCalculatorProcessTree : null
+2020-11-21 22:02:22  [ LocalJobRunner Map Task Executor #0:1404 ] - [ INFO ]  Processing split: hdfs://master:9000/user/root/mr/data/cf/ua.base:0+1792501
+2020-11-21 22:02:22  [ LocalJobRunner Map Task Executor #0:1459 ] - [ INFO ]  (EQUATOR) 0 kvi 26214396(104857584)
+2020-11-21 22:02:22  [ LocalJobRunner Map Task Executor #0:1459 ] - [ INFO ]  mapreduce.task.io.sort.mb: 100
+2020-11-21 22:02:22  [ LocalJobRunner Map Task Executor #0:1459 ] - [ INFO ]  soft limit at 83886080
+2020-11-21 22:02:22  [ LocalJobRunner Map Task Executor #0:1459 ] - [ INFO ]  bufstart = 0; bufvoid = 104857600
+2020-11-21 22:02:22  [ LocalJobRunner Map Task Executor #0:1460 ] - [ INFO ]  kvstart = 26214396; length = 6553600
+2020-11-21 22:02:22  [ LocalJobRunner Map Task Executor #0:1462 ] - [ INFO ]  Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2020-11-21 22:02:22  [ main:2328 ] - [ INFO ]  Job job_local591495832_0001 running in uber mode : false
+2020-11-21 22:02:22  [ main:2330 ] - [ INFO ]   map 0% reduce 0%
+2020-11-21 22:02:28  [ communication thread:7408 ] - [ INFO ]  map > map
+2020-11-21 22:02:28  [ main:8354 ] - [ INFO ]   map 32% reduce 0%
+2020-11-21 22:02:31  [ communication thread:10412 ] - [ INFO ]  map > map
+2020-11-21 22:02:31  [ main:11365 ] - [ INFO ]   map 46% reduce 0%
+2020-11-21 22:02:34  [ communication thread:13414 ] - [ INFO ]  map > map
+2020-11-21 22:02:34  [ LocalJobRunner Map Task Executor #0:14230 ] - [ INFO ]  map > map
+2020-11-21 22:02:34  [ LocalJobRunner Map Task Executor #0:14232 ] - [ INFO ]  Starting flush of map output
+2020-11-21 22:02:34  [ LocalJobRunner Map Task Executor #0:14232 ] - [ INFO ]  Spilling map output
+2020-11-21 22:02:34  [ LocalJobRunner Map Task Executor #0:14232 ] - [ INFO ]  bufstart = 0; bufend = 886801; bufvoid = 104857600
+2020-11-21 22:02:34  [ LocalJobRunner Map Task Executor #0:14232 ] - [ INFO ]  kvstart = 26214396(104857584); kvend = 25852120(103408480); length = 362277/6553600
+2020-11-21 22:02:34  [ main:14375 ] - [ INFO ]   map 63% reduce 0%
+2020-11-21 22:02:36  [ LocalJobRunner Map Task Executor #0:15910 ] - [ INFO ]  Finished spill 0
+2020-11-21 22:02:36  [ LocalJobRunner Map Task Executor #0:15914 ] - [ INFO ]  Task:attempt_local591495832_0001_m_000000_0 is done. And is in the process of committing
+2020-11-21 22:02:36  [ LocalJobRunner Map Task Executor #0:15945 ] - [ INFO ]  map
+2020-11-21 22:02:36  [ LocalJobRunner Map Task Executor #0:15945 ] - [ INFO ]  Task 'attempt_local591495832_0001_m_000000_0' done.
+2020-11-21 22:02:36  [ LocalJobRunner Map Task Executor #0:15945 ] - [ INFO ]  Finishing task: attempt_local591495832_0001_m_000000_0
+2020-11-21 22:02:36  [ Thread-18:15946 ] - [ INFO ]  map task executor complete.
+2020-11-21 22:02:36  [ Thread-18:15948 ] - [ INFO ]  Waiting for reduce tasks
+2020-11-21 22:02:36  [ pool-6-thread-1:15948 ] - [ INFO ]  Starting task: attempt_local591495832_0001_r_000000_0
+2020-11-21 22:02:36  [ pool-6-thread-1:15954 ] - [ INFO ]  File Output Committer Algorithm version is 1
+2020-11-21 22:02:36  [ pool-6-thread-1:15955 ] - [ INFO ]  ProcfsBasedProcessTree currently is supported only on Linux.
+2020-11-21 22:02:36  [ pool-6-thread-1:15955 ] - [ INFO ]   Using ResourceCalculatorProcessTree : null
+2020-11-21 22:02:36  [ pool-6-thread-1:15957 ] - [ INFO ]  Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@34159ada
+2020-11-21 22:02:36  [ pool-6-thread-1:15966 ] - [ INFO ]  MergerManager: memoryLimit=2672505600, maxSingleShuffleLimit=668126400, mergeThreshold=1763853824, ioSortFactor=10, memToMemMergeOutputsThreshold=10
+2020-11-21 22:02:36  [ EventFetcher for fetching Map Completion Events:15967 ] - [ INFO ]  attempt_local591495832_0001_r_000000_0 Thread started: EventFetcher for fetching Map Completion Events
+2020-11-21 22:02:36  [ localfetcher#1:15989 ] - [ INFO ]  localfetcher#1 about to shuffle output of map attempt_local591495832_0001_m_000000_0 decomp: 31108971 len: 31108975 to MEMORY
+2020-11-21 22:02:36  [ localfetcher#1:16020 ] - [ INFO ]  Read 31108971 bytes from map-output for attempt_local591495832_0001_m_000000_0
+2020-11-21 22:02:36  [ localfetcher#1:16021 ] - [ INFO ]  closeInMemoryFile -> map-output of size: 31108971, inMemoryMapOutputs.size() -> 1, commitMemory -> 0, usedMemory ->31108971
+2020-11-21 22:02:36  [ EventFetcher for fetching Map Completion Events:16022 ] - [ INFO ]  EventFetcher is interrupted.. Returning
+2020-11-21 22:02:36  [ pool-6-thread-1:16022 ] - [ INFO ]  1 / 1 copied.
+2020-11-21 22:02:36  [ pool-6-thread-1:16022 ] - [ INFO ]  finalMerge called with 1 in-memory map-outputs and 0 on-disk map-outputs
+2020-11-21 22:02:36  [ pool-6-thread-1:16027 ] - [ INFO ]  Merging 1 sorted segments
+2020-11-21 22:02:36  [ pool-6-thread-1:16027 ] - [ INFO ]  Down to the last merge-pass, with 1 segments left of total size: 31108965 bytes
+2020-11-21 22:02:36  [ pool-6-thread-1:16058 ] - [ INFO ]  Merged 1 segments, 31108971 bytes to disk to satisfy reduce memory limit
+2020-11-21 22:02:36  [ pool-6-thread-1:16059 ] - [ INFO ]  Merging 1 files, 31108975 bytes from disk
+2020-11-21 22:02:36  [ pool-6-thread-1:16059 ] - [ INFO ]  Merging 0 segments, 0 bytes from memory into reduce
+2020-11-21 22:02:36  [ pool-6-thread-1:16059 ] - [ INFO ]  Merging 1 sorted segments
+2020-11-21 22:02:36  [ pool-6-thread-1:16060 ] - [ INFO ]  Down to the last merge-pass, with 1 segments left of total size: 31108965 bytes
+2020-11-21 22:02:36  [ pool-6-thread-1:16060 ] - [ INFO ]  1 / 1 copied.
+2020-11-21 22:02:36  [ pool-6-thread-1:16093 ] - [ INFO ]  mapred.skip.on is deprecated. Instead, use mapreduce.job.skiprecords
+2020-11-21 22:02:37  [ main:16382 ] - [ INFO ]   map 100% reduce 0%
+2020-11-21 22:02:42  [ communication thread:21962 ] - [ INFO ]  reduce > reduce
+2020-11-21 22:02:43  [ main:22394 ] - [ INFO ]   map 100% reduce 94%
+2020-11-21 22:02:45  [ communication thread:24965 ] - [ INFO ]  reduce > reduce
+2020-11-21 22:02:46  [ main:25402 ] - [ INFO ]   map 100% reduce 100%
+2020-11-21 22:02:46  [ pool-6-thread-1:25794 ] - [ INFO ]  Task:attempt_local591495832_0001_r_000000_0 is done. And is in the process of committing
+2020-11-21 22:02:46  [ pool-6-thread-1:25804 ] - [ INFO ]  reduce > reduce
+2020-11-21 22:02:46  [ pool-6-thread-1:25804 ] - [ INFO ]  Task attempt_local591495832_0001_r_000000_0 is allowed to commit now
+2020-11-21 22:02:46  [ pool-6-thread-1:25841 ] - [ INFO ]  Saved output of task 'attempt_local591495832_0001_r_000000_0' to hdfs://master:9000/user/root/mr/data/cf/data/score_matrix/_temporary/0/task_local591495832_0001_r_000000
+2020-11-21 22:02:46  [ pool-6-thread-1:25841 ] - [ INFO ]  reduce > reduce
+2020-11-21 22:02:46  [ pool-6-thread-1:25841 ] - [ INFO ]  Task 'attempt_local591495832_0001_r_000000_0' done.
+2020-11-21 22:02:46  [ pool-6-thread-1:25841 ] - [ INFO ]  Finishing task: attempt_local591495832_0001_r_000000_0
+2020-11-21 22:02:46  [ Thread-18:25842 ] - [ INFO ]  reduce task executor complete.
+2020-11-21 22:02:47  [ main:26408 ] - [ INFO ]  Job job_local591495832_0001 completed successfully
+2020-11-21 22:02:47  [ main:26417 ] - [ INFO ]  Counters: 35
+	File System Counters
+		FILE: Number of bytes read=62218314
+		FILE: Number of bytes written=93893965
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=3585002
+		HDFS: Number of bytes written=31103311
+		HDFS: Number of read operations=17
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=6
+	Map-Reduce Framework
+		Map input records=90570
+		Map output records=90570
+		Map output bytes=886801
+		Map output materialized bytes=31108975
+		Input split bytes=112
+		Combine input records=90570
+		Combine output records=943
+		Reduce input groups=943
+		Reduce shuffle bytes=31108975
+		Reduce input records=943
+		Reduce output records=943
+		Spilled Records=1886
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=49
+		Total committed heap usage (bytes)=978845696
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=1792501
+	File Output Format Counters 
+		Bytes Written=31103311
+2020-11-21 22:10:45  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2020-11-21 22:10:45  [ main:558 ] - [ INFO ]  session.id is deprecated. Instead, use dfs.metrics.session-id
+2020-11-21 22:10:45  [ main:559 ] - [ INFO ]  Initializing JVM Metrics with processName=JobTracker, sessionId=
+2020-11-21 22:10:46  [ main:772 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2020-11-21 22:10:46  [ main:777 ] - [ WARN ]  No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2020-11-21 22:10:46  [ main:789 ] - [ INFO ]  Total input paths to process : 1
+2020-11-21 22:10:46  [ main:855 ] - [ INFO ]  number of splits:1
+2020-11-21 22:10:46  [ main:917 ] - [ INFO ]  Submitting tokens for job: job_local199880299_0001
+2020-11-21 22:10:46  [ main:1004 ] - [ INFO ]  The url to track the job: http://localhost:8080/
+2020-11-21 22:10:46  [ main:1005 ] - [ INFO ]  Running job: job_local199880299_0001
+2020-11-21 22:10:46  [ Thread-18:1005 ] - [ INFO ]  OutputCommitter set in config null
+2020-11-21 22:10:46  [ Thread-18:1008 ] - [ INFO ]  File Output Committer Algorithm version is 1
+2020-11-21 22:10:46  [ Thread-18:1010 ] - [ INFO ]  OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2020-11-21 22:10:46  [ Thread-18:1046 ] - [ INFO ]  Waiting for map tasks
+2020-11-21 22:10:46  [ LocalJobRunner Map Task Executor #0:1047 ] - [ INFO ]  Starting task: attempt_local199880299_0001_m_000000_0
+2020-11-21 22:10:46  [ LocalJobRunner Map Task Executor #0:1061 ] - [ INFO ]  File Output Committer Algorithm version is 1
+2020-11-21 22:10:46  [ LocalJobRunner Map Task Executor #0:1065 ] - [ INFO ]  ProcfsBasedProcessTree currently is supported only on Linux.
+2020-11-21 22:10:46  [ LocalJobRunner Map Task Executor #0:1065 ] - [ INFO ]   Using ResourceCalculatorProcessTree : null
+2020-11-21 22:10:46  [ LocalJobRunner Map Task Executor #0:1067 ] - [ INFO ]  Processing split: hdfs://master:9000/user/root/mr/data/cf/data/score_matrix/part-r-00000:0+31103311
+2020-11-21 22:10:46  [ LocalJobRunner Map Task Executor #0:1122 ] - [ INFO ]  (EQUATOR) 0 kvi 26214396(104857584)
+2020-11-21 22:10:46  [ LocalJobRunner Map Task Executor #0:1122 ] - [ INFO ]  mapreduce.task.io.sort.mb: 100
+2020-11-21 22:10:46  [ LocalJobRunner Map Task Executor #0:1122 ] - [ INFO ]  soft limit at 83886080
+2020-11-21 22:10:46  [ LocalJobRunner Map Task Executor #0:1122 ] - [ INFO ]  bufstart = 0; bufvoid = 104857600
+2020-11-21 22:10:46  [ LocalJobRunner Map Task Executor #0:1122 ] - [ INFO ]  kvstart = 26214396; length = 6553600
+2020-11-21 22:10:46  [ LocalJobRunner Map Task Executor #0:1124 ] - [ INFO ]  Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2020-11-21 22:10:47  [ main:2009 ] - [ INFO ]  Job job_local199880299_0001 running in uber mode : false
+2020-11-21 22:10:47  [ main:2011 ] - [ INFO ]   map 0% reduce 0%
+2020-11-21 22:14:43  [ communication thread:238298 ] - [ INFO ]  map > map
+2020-11-21 22:14:46  [ communication thread:241301 ] - [ INFO ]  map > map
+2020-11-21 22:14:49  [ communication thread:244301 ] - [ INFO ]  map > map
+2020-11-21 22:14:52  [ communication thread:247305 ] - [ INFO ]  map > map
+2020-11-21 22:14:55  [ communication thread:250309 ] - [ INFO ]  map > map
+2020-11-21 22:14:58  [ communication thread:253310 ] - [ INFO ]  map > map
+2020-11-21 22:15:01  [ communication thread:256316 ] - [ INFO ]  map > map
+2020-11-21 22:15:04  [ communication thread:259321 ] - [ INFO ]  map > map
+2020-11-21 22:15:05  [ main:259800 ] - [ INFO ]   map 1% reduce 0%
+2020-11-21 22:15:07  [ communication thread:262324 ] - [ INFO ]  map > map
+2020-11-21 22:15:10  [ communication thread:265328 ] - [ INFO ]  map > map
+2020-11-21 22:15:13  [ communication thread:268330 ] - [ INFO ]  map > map
+2020-11-21 22:15:16  [ communication thread:271333 ] - [ INFO ]  map > map
+2020-11-21 22:15:19  [ communication thread:274334 ] - [ INFO ]  map > map
+2020-11-21 22:15:22  [ communication thread:277335 ] - [ INFO ]  map > map
+2020-11-21 22:15:25  [ communication thread:280341 ] - [ INFO ]  map > map
+2020-11-21 22:15:26  [ main:280861 ] - [ INFO ]   map 2% reduce 0%
+2020-11-21 22:15:28  [ communication thread:283345 ] - [ INFO ]  map > map
+2020-11-21 22:15:31  [ communication thread:286349 ] - [ INFO ]  map > map
+2020-11-21 22:15:34  [ communication thread:289354 ] - [ INFO ]  map > map
+2020-11-21 22:15:37  [ communication thread:292360 ] - [ INFO ]  map > map
+2020-11-21 22:15:40  [ communication thread:295366 ] - [ INFO ]  map > map
+2020-11-21 22:15:43  [ communication thread:298369 ] - [ INFO ]  map > map
+2020-11-21 22:15:44  [ main:298924 ] - [ INFO ]   map 3% reduce 0%
+2020-11-21 22:15:46  [ communication thread:301374 ] - [ INFO ]  map > map
+2020-11-21 22:15:49  [ communication thread:304380 ] - [ INFO ]  map > map
+2020-11-21 22:15:52  [ communication thread:307381 ] - [ INFO ]  map > map
+2020-11-21 22:15:55  [ communication thread:310382 ] - [ INFO ]  map > map
+2020-11-21 22:15:58  [ communication thread:313388 ] - [ INFO ]  map > map
+2020-11-21 22:16:01  [ communication thread:316392 ] - [ INFO ]  map > map
+2020-11-21 22:16:02  [ main:316986 ] - [ INFO ]   map 4% reduce 0%
+2020-11-21 22:16:04  [ communication thread:319396 ] - [ INFO ]  map > map
+2020-11-21 22:16:07  [ communication thread:322401 ] - [ INFO ]  map > map
+2020-11-21 22:16:10  [ communication thread:325406 ] - [ INFO ]  map > map
+2020-11-21 22:16:13  [ communication thread:328410 ] - [ INFO ]  map > map
+2020-11-21 22:16:16  [ communication thread:331412 ] - [ INFO ]  map > map
+2020-11-21 22:16:17  [ main:332034 ] - [ INFO ]   map 5% reduce 0%
+2020-11-21 22:16:19  [ communication thread:334417 ] - [ INFO ]  map > map
+2020-11-21 22:16:22  [ communication thread:337418 ] - [ INFO ]  map > map
+2020-11-21 22:16:25  [ communication thread:340422 ] - [ INFO ]  map > map
+2020-11-21 22:16:28  [ communication thread:343425 ] - [ INFO ]  map > map
+2020-11-21 22:16:31  [ communication thread:346430 ] - [ INFO ]  map > map
+2020-11-21 22:16:32  [ main:347075 ] - [ INFO ]   map 6% reduce 0%
+2020-11-21 22:16:34  [ communication thread:349435 ] - [ INFO ]  map > map
+2020-11-21 22:16:37  [ communication thread:352438 ] - [ INFO ]  map > map
+2020-11-21 22:16:40  [ communication thread:355441 ] - [ INFO ]  map > map
+2020-11-21 22:16:43  [ communication thread:358442 ] - [ INFO ]  map > map
+2020-11-21 22:16:44  [ main:359110 ] - [ INFO ]   map 7% reduce 0%
+2020-11-21 22:16:46  [ communication thread:361445 ] - [ INFO ]  map > map
+2020-11-21 22:16:49  [ communication thread:364450 ] - [ INFO ]  map > map
+2020-11-21 22:16:52  [ communication thread:367455 ] - [ INFO ]  map > map
+2020-11-21 22:16:55  [ communication thread:370457 ] - [ INFO ]  map > map
+2020-11-21 22:16:58  [ communication thread:373463 ] - [ INFO ]  map > map
+2020-11-21 22:16:59  [ main:374149 ] - [ INFO ]   map 8% reduce 0%
+2020-11-21 22:17:01  [ communication thread:376466 ] - [ INFO ]  map > map
+2020-11-21 22:17:04  [ communication thread:379471 ] - [ INFO ]  map > map
+2020-11-21 22:17:07  [ communication thread:382475 ] - [ INFO ]  map > map
+2020-11-21 22:17:10  [ communication thread:385480 ] - [ INFO ]  map > map
+2020-11-21 22:17:11  [ main:386179 ] - [ INFO ]   map 9% reduce 0%
+2020-11-21 22:17:13  [ communication thread:388481 ] - [ INFO ]  map > map
+2020-11-21 22:17:16  [ communication thread:391483 ] - [ INFO ]  map > map
+2020-11-21 22:17:19  [ communication thread:394488 ] - [ INFO ]  map > map
+2020-11-21 22:17:22  [ communication thread:397490 ] - [ INFO ]  map > map
+2020-11-21 22:17:23  [ main:398212 ] - [ INFO ]   map 10% reduce 0%
+2020-11-21 22:17:25  [ communication thread:400491 ] - [ INFO ]  map > map
+2020-11-21 22:17:28  [ communication thread:403493 ] - [ INFO ]  map > map
+2020-11-21 22:17:31  [ communication thread:406493 ] - [ INFO ]  map > map
+2020-11-21 22:17:32  [ main:407237 ] - [ INFO ]   map 11% reduce 0%
+2020-11-21 22:17:34  [ communication thread:409494 ] - [ INFO ]  map > map
+2020-11-21 22:17:37  [ communication thread:412500 ] - [ INFO ]  map > map
+2020-11-21 22:17:40  [ communication thread:415503 ] - [ INFO ]  map > map
+2020-11-21 22:17:43  [ communication thread:418503 ] - [ INFO ]  map > map
+2020-11-21 22:17:44  [ main:419267 ] - [ INFO ]   map 12% reduce 0%
+2020-11-21 22:17:46  [ communication thread:421504 ] - [ INFO ]  map > map
+2020-11-21 22:17:49  [ communication thread:424510 ] - [ INFO ]  map > map
+2020-11-21 22:17:52  [ communication thread:427511 ] - [ INFO ]  map > map
+2020-11-21 22:17:55  [ communication thread:430516 ] - [ INFO ]  map > map
+2020-11-21 22:17:56  [ main:431300 ] - [ INFO ]   map 13% reduce 0%
+2020-11-21 22:17:58  [ communication thread:433519 ] - [ INFO ]  map > map
+2020-11-21 22:18:01  [ communication thread:436521 ] - [ INFO ]  map > map
+2020-11-21 22:18:04  [ communication thread:439528 ] - [ INFO ]  map > map
+2020-11-21 22:18:07  [ communication thread:442532 ] - [ INFO ]  map > map
+2020-11-21 22:18:08  [ main:443338 ] - [ INFO ]   map 14% reduce 0%
+2020-11-21 22:18:10  [ communication thread:445537 ] - [ INFO ]  map > map
+2020-11-21 22:18:13  [ communication thread:448541 ] - [ INFO ]  map > map
+2020-11-21 22:18:16  [ communication thread:451542 ] - [ INFO ]  map > map
+2020-11-21 22:18:17  [ main:452360 ] - [ INFO ]   map 15% reduce 0%
+2020-11-21 22:18:19  [ communication thread:454547 ] - [ INFO ]  map > map
+2020-11-21 22:18:22  [ communication thread:457550 ] - [ INFO ]  map > map
+2020-11-21 22:18:25  [ communication thread:460554 ] - [ INFO ]  map > map
+2020-11-21 22:18:28  [ communication thread:463555 ] - [ INFO ]  map > map
+2020-11-21 22:18:29  [ main:464395 ] - [ INFO ]   map 16% reduce 0%
+2020-11-21 22:18:31  [ communication thread:466560 ] - [ INFO ]  map > map
+2020-11-21 22:18:34  [ communication thread:469565 ] - [ INFO ]  map > map
+2020-11-21 22:18:37  [ communication thread:472570 ] - [ INFO ]  map > map
+2020-11-21 22:18:40  [ communication thread:475573 ] - [ INFO ]  map > map
+2020-11-21 22:18:41  [ main:476436 ] - [ INFO ]   map 17% reduce 0%
+2020-11-21 22:18:43  [ communication thread:478578 ] - [ INFO ]  map > map
+2020-11-21 22:18:46  [ communication thread:481583 ] - [ INFO ]  map > map
+2020-11-21 22:18:49  [ communication thread:484586 ] - [ INFO ]  map > map
+2020-11-21 22:18:50  [ main:485466 ] - [ INFO ]   map 18% reduce 0%
+2020-11-21 22:18:52  [ communication thread:487591 ] - [ INFO ]  map > map
+2020-11-21 22:18:55  [ communication thread:490592 ] - [ INFO ]  map > map
+2020-11-21 22:18:58  [ communication thread:493593 ] - [ INFO ]  map > map
+2020-11-21 22:18:59  [ main:494486 ] - [ INFO ]   map 19% reduce 0%
+2020-11-21 22:19:01  [ communication thread:496596 ] - [ INFO ]  map > map
+2020-11-21 22:19:04  [ communication thread:499600 ] - [ INFO ]  map > map
+2020-11-21 22:19:07  [ communication thread:502602 ] - [ INFO ]  map > map
+2020-11-21 22:19:10  [ communication thread:505605 ] - [ INFO ]  map > map
+2020-11-21 22:19:11  [ main:506516 ] - [ INFO ]   map 20% reduce 0%
+2020-11-21 22:19:13  [ communication thread:508610 ] - [ INFO ]  map > map
+2020-11-21 22:19:16  [ communication thread:511614 ] - [ INFO ]  map > map
+2020-11-21 22:19:19  [ communication thread:514619 ] - [ INFO ]  map > map
+2020-11-21 22:19:20  [ main:515540 ] - [ INFO ]   map 21% reduce 0%
+2020-11-21 22:19:22  [ communication thread:517620 ] - [ INFO ]  map > map
+2020-11-21 22:19:25  [ communication thread:520621 ] - [ INFO ]  map > map
+2020-11-21 22:19:28  [ communication thread:523623 ] - [ INFO ]  map > map
+2020-11-21 22:19:29  [ main:524561 ] - [ INFO ]   map 22% reduce 0%
+2020-11-21 22:19:31  [ communication thread:526628 ] - [ INFO ]  map > map
+2020-11-21 22:19:34  [ communication thread:529631 ] - [ INFO ]  map > map
+2020-11-21 22:19:37  [ communication thread:532636 ] - [ INFO ]  map > map
+2020-11-21 22:19:40  [ communication thread:535638 ] - [ INFO ]  map > map
+2020-11-21 22:19:41  [ main:536594 ] - [ INFO ]   map 23% reduce 0%
+2020-11-21 22:19:43  [ communication thread:538641 ] - [ INFO ]  map > map
+2020-11-21 22:19:47  [ communication thread:541646 ] - [ INFO ]  map > map
+2020-11-21 22:19:50  [ communication thread:544651 ] - [ INFO ]  map > map
+2020-11-21 22:19:50  [ main:545625 ] - [ INFO ]   map 24% reduce 0%
+2020-11-21 22:19:53  [ communication thread:547656 ] - [ INFO ]  map > map
+2020-11-21 22:19:56  [ communication thread:550659 ] - [ INFO ]  map > map
+2020-11-21 22:19:59  [ communication thread:553664 ] - [ INFO ]  map > map
+2020-11-21 22:20:00  [ main:554659 ] - [ INFO ]   map 25% reduce 0%
+2020-11-21 22:20:02  [ communication thread:556668 ] - [ INFO ]  map > map
+2020-11-21 22:20:05  [ communication thread:559671 ] - [ INFO ]  map > map
+2020-11-21 22:20:08  [ communication thread:562673 ] - [ INFO ]  map > map
+2020-11-21 22:20:08  [ main:562678 ] - [ INFO ]   map 26% reduce 0%
+2020-11-21 22:20:11  [ communication thread:565675 ] - [ INFO ]  map > map
+2020-11-21 22:20:14  [ communication thread:568676 ] - [ INFO ]  map > map
+2020-11-21 22:20:17  [ communication thread:571678 ] - [ INFO ]  map > map
+2020-11-21 22:20:17  [ main:571710 ] - [ INFO ]   map 27% reduce 0%
+2020-11-21 22:20:20  [ communication thread:574683 ] - [ INFO ]  map > map
+2020-11-21 22:20:23  [ communication thread:577687 ] - [ INFO ]  map > map
+2020-11-21 22:20:26  [ communication thread:580689 ] - [ INFO ]  map > map
+2020-11-21 22:20:26  [ main:580735 ] - [ INFO ]   map 28% reduce 0%
+2020-11-21 22:20:29  [ communication thread:583690 ] - [ INFO ]  map > map
+2020-11-21 22:20:32  [ communication thread:586691 ] - [ INFO ]  map > map
+2020-11-21 22:20:35  [ communication thread:589693 ] - [ INFO ]  map > map
+2020-11-21 22:20:35  [ main:589761 ] - [ INFO ]   map 29% reduce 0%
+2020-11-21 22:20:38  [ communication thread:592699 ] - [ INFO ]  map > map
+2020-11-21 22:20:41  [ communication thread:595704 ] - [ INFO ]  map > map
+2020-11-21 22:20:44  [ communication thread:598705 ] - [ INFO ]  map > map
+2020-11-21 22:20:47  [ communication thread:601707 ] - [ INFO ]  map > map
+2020-11-21 22:20:47  [ main:601806 ] - [ INFO ]   map 30% reduce 0%
+2020-11-21 22:20:50  [ communication thread:604709 ] - [ INFO ]  map > map
+2020-11-21 22:20:53  [ communication thread:607714 ] - [ INFO ]  map > map
+2020-11-21 22:20:56  [ communication thread:610717 ] - [ INFO ]  map > map
+2020-11-21 22:20:56  [ main:610827 ] - [ INFO ]   map 31% reduce 0%
+2020-11-21 22:20:59  [ communication thread:613722 ] - [ INFO ]  map > map
+2020-11-21 22:21:02  [ communication thread:616728 ] - [ INFO ]  map > map
+2020-11-21 22:21:05  [ communication thread:619731 ] - [ INFO ]  map > map
+2020-11-21 22:21:05  [ main:619842 ] - [ INFO ]   map 32% reduce 0%
+2020-11-21 22:21:08  [ communication thread:622732 ] - [ INFO ]  map > map
+2020-11-21 22:21:11  [ communication thread:625737 ] - [ INFO ]  map > map
+2020-11-21 22:21:14  [ communication thread:628741 ] - [ INFO ]  map > map
+2020-11-21 22:21:14  [ main:628865 ] - [ INFO ]   map 33% reduce 0%
+2020-11-21 22:21:17  [ communication thread:631746 ] - [ INFO ]  map > map
+2020-11-21 22:21:20  [ communication thread:634750 ] - [ INFO ]  map > map
+2020-11-21 22:21:23  [ communication thread:637752 ] - [ INFO ]  map > map
+2020-11-21 22:21:23  [ main:637900 ] - [ INFO ]   map 34% reduce 0%
+2020-11-21 22:21:26  [ communication thread:640757 ] - [ INFO ]  map > map
+2020-11-21 22:21:29  [ communication thread:643760 ] - [ INFO ]  map > map
+2020-11-21 22:21:32  [ communication thread:646763 ] - [ INFO ]  map > map
+2020-11-21 22:21:32  [ main:646923 ] - [ INFO ]   map 35% reduce 0%
+2020-11-21 22:21:35  [ communication thread:649768 ] - [ INFO ]  map > map
+2020-11-21 22:21:38  [ communication thread:652769 ] - [ INFO ]  map > map
+2020-11-21 22:21:41  [ communication thread:655773 ] - [ INFO ]  map > map
+2020-11-21 22:21:41  [ main:655954 ] - [ INFO ]   map 36% reduce 0%
+2020-11-21 22:21:44  [ communication thread:658776 ] - [ INFO ]  map > map
+2020-11-21 22:21:47  [ communication thread:661779 ] - [ INFO ]  map > map
+2020-11-21 22:21:50  [ communication thread:664781 ] - [ INFO ]  map > map

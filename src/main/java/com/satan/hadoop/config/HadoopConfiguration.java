@@ -38,6 +38,8 @@ public class HadoopConfiguration {
                     configuration = new Configuration();
                     configuration.set(HDFS_URL_NAME, PRO.getProperty(HDFS_URL_NAME));
                     configuration.set(DFS_CLIENT_USE_DATANODE_HOSTNAME, PRO.getProperty(DFS_CLIENT_USE_DATANODE_HOSTNAME));
+                    configuration.set("dfs.client.block.write.replace-datanode-on-failure.policy", "NEVER");
+                    configuration.set("dfs.client.block.write.replace-datanode-on-failure.enable", "true");
                     return configuration;
                 }
             }

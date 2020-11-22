@@ -5,6 +5,7 @@ import com.satan.hadoop.config.HadoopConfiguration;
 import com.satan.hadoop.constant.Constant;
 import com.satan.hadoop.model.param.RunJobParam;
 import com.satan.hadoop.utils.DistanceUtil;
+import com.satan.hadoop.utils.HdfsUtil;
 import com.satan.hadoop.utils.KmeansUtil;
 import com.satan.hadoop.utils.MapReduceUtil;
 import org.apache.commons.lang3.StringUtils;
@@ -19,6 +20,8 @@ import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -35,13 +38,15 @@ import java.util.stream.Collectors;
  */
 public class KmeansMapReduceJob {
 
+    private static final Logger log = LoggerFactory.getLogger(KmeansMapReduceJob.class);
+
     private static int clusterNums = 3;
 
     private static Map<String, String[]> clusterCenterMap;
 
     public static class InitClusterMapper extends Mapper<LongWritable, Text, Text, Text> {
         @Override
-        protected void setup(Context context) throws IOException, InterruptedException {
+        protected void setup(Context context) {
             Configuration configuration = context.getConfiguration();
             clusterNums = StringUtils.isBlank(configuration.get(Constant.DEFAULT_CLUSTER_NUMS))
                     ? clusterNums
@@ -64,7 +69,7 @@ public class KmeansMapReduceJob {
     public static class InitClusterReduce extends Reducer<Text, Text, Text, Text> {
         @Override
         protected void reduce(Text key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
-            List<Text> textList = Lists.newArrayList(values);
+            List<Text> textList = getTextList(values);
             int len = textList.size();
             Text text = textList.get(0);
             int length = text.toString().split(Constant.COMMA).length;
@@ -126,7 +131,7 @@ public class KmeansMapReduceJob {
 
         @Override
         protected void reduce(Text key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
-            List<Text> textList = Lists.newArrayList(values);
+            List<Text> textList = getTextList(values);
             int nums = textList.size();
             Text text = textList.get(0);
             if (Objects.isNull(text)) {
@@ -149,6 +154,14 @@ public class KmeansMapReduceJob {
         }
     }
 
+    private static List<Text> getTextList(Iterable<Text> values) {
+        List<Text> textList = Lists.newArrayList();
+        for (Text t : values) {
+            textList.add(t);
+        }
+        return textList;
+    }
+
     public static class KmeansReducer extends Reducer<Text, Text, Text, Text> {
 
         private final Text text = new Text();
@@ -156,7 +169,7 @@ public class KmeansMapReduceJob {
         @Override
         protected void reduce(Text key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
             int nums = 0;
-            List<Text> textList = Lists.newArrayList(values);
+            List<Text> textList = getTextList(values);
             int length = textList.get(0).toString().split(Constant.COMMA).length;
             double[] center = new double[length];
             for (Text t : textList) {
@@ -193,7 +206,7 @@ public class KmeansMapReduceJob {
         }
         Job job = Job.getInstance(configuration);
         job.setJobName("train " + begin);
-        System.out.println("train " + begin);
+        log.info("第 " + begin + " 次训练");
         job.setJarByClass(KmeansMapReduceJob.class);
 
         job.setMapperClass(KmeansMapper.class);
@@ -223,7 +236,7 @@ public class KmeansMapReduceJob {
                 .outputKeyClass(Text.class)
                 .outputValueClass(Text.class)
                 .build());
-        KmeansUtil.copy(outputPath, tmpPath);
+        HdfsUtil.copy(outputPath, tmpPath);
         int begin = 0;
         while (begin < maxIter) {
             runJob(inputPath, outputPath, begin, tmpPath);
@@ -233,10 +246,10 @@ public class KmeansMapReduceJob {
             }
             begin++;
             if (begin != maxIter) {
-                KmeansUtil.copy(outputPath, tmpPath);
+                HdfsUtil.copy(outputPath, tmpPath);
             } else {
                 runJob(tmpPath, outputPath, begin, tmpPath);
-                KmeansUtil.deleteLastResult(tmpPath);
+                HdfsUtil.deletePath(tmpPath);
             }
         }
     }

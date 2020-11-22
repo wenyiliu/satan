@@ -42,6 +42,18 @@ public class WordCountMapReduceJob {
         }
     }
 
+    public static class WordCountCombiner extends Reducer<Text, IntWritable, Text, IntWritable> {
+        @Override
+        protected void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
+            int count = 0;
+            for (IntWritable value : values) {
+                count += value.get();
+            }
+            System.out.println(key.toString() + "--" + count);
+            context.write(key, new IntWritable(count));
+        }
+    }
+
     public static class WordCountReducer extends Reducer<Text, IntWritable, Text, LongWritable> {
         @Override
         protected void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
@@ -49,6 +61,7 @@ public class WordCountMapReduceJob {
             for (IntWritable value : values) {
                 count += value.get();
             }
+            System.out.println(key.toString() + "--" + count);
             context.write(key, new LongWritable(count));
         }
     }
@@ -61,6 +74,7 @@ public class WordCountMapReduceJob {
                 .mapperClass(WordCountMapper.class)
                 .mapOutputKeyClass(Text.class)
                 .mapOutputValueClass(IntWritable.class)
+                .combinerClass(WordCountCombiner.class)
                 .reducerClass(WordCountReducer.class)
                 .outputKeyClass(Text.class)
                 .outputValueClass(LongWritable.class)
@@ -69,8 +83,8 @@ public class WordCountMapReduceJob {
     }
 
     public static void main(String[] args) throws Exception {
-        String inputPath = "/user/root/mr/word_count/input";
-        String outputPath = "/user/root/mr/word_count/output";
+        String inputPath = "/user/root/mr/data/word_count/test.txt";
+        String outputPath = "/user/root/mr/word_count/output/result";
         if (args.length >= 2) {
             inputPath = args[0];
             outputPath = args[1];
