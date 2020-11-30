@@ -1,0 +1,239 @@
+2020-11-23 10:37:18  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2020-11-23 10:37:19  [ main:869 ] - [ INFO ]  session.id is deprecated. Instead, use dfs.metrics.session-id
+2020-11-23 10:37:19  [ main:870 ] - [ INFO ]  Initializing JVM Metrics with processName=JobTracker, sessionId=
+2020-11-23 10:37:19  [ main:1069 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2020-11-23 10:37:19  [ main:1074 ] - [ WARN ]  No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2020-11-23 10:37:19  [ main:1087 ] - [ INFO ]  Total input paths to process : 1
+2020-11-23 10:37:19  [ main:1178 ] - [ INFO ]  number of splits:1
+2020-11-23 10:37:19  [ main:1251 ] - [ INFO ]  Submitting tokens for job: job_local986362213_0001
+2020-11-23 10:37:19  [ main:1361 ] - [ INFO ]  The url to track the job: http://localhost:8080/
+2020-11-23 10:37:19  [ main:1362 ] - [ INFO ]  Running job: job_local986362213_0001
+2020-11-23 10:37:19  [ Thread-18:1363 ] - [ INFO ]  OutputCommitter set in config null
+2020-11-23 10:37:19  [ Thread-18:1367 ] - [ INFO ]  File Output Committer Algorithm version is 1
+2020-11-23 10:37:19  [ Thread-18:1369 ] - [ INFO ]  OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2020-11-23 10:37:19  [ Thread-18:1416 ] - [ INFO ]  Waiting for map tasks
+2020-11-23 10:37:19  [ LocalJobRunner Map Task Executor #0:1416 ] - [ INFO ]  Starting task: attempt_local986362213_0001_m_000000_0
+2020-11-23 10:37:19  [ LocalJobRunner Map Task Executor #0:1440 ] - [ INFO ]  File Output Committer Algorithm version is 1
+2020-11-23 10:37:19  [ LocalJobRunner Map Task Executor #0:1448 ] - [ INFO ]  ProcfsBasedProcessTree currently is supported only on Linux.
+2020-11-23 10:37:19  [ LocalJobRunner Map Task Executor #0:1448 ] - [ INFO ]   Using ResourceCalculatorProcessTree : null
+2020-11-23 10:37:19  [ LocalJobRunner Map Task Executor #0:1452 ] - [ INFO ]  Processing split: hdfs://master:9000/user/root/mr/data/cf/data/sim_result/part-r-00000:0+8657730
+2020-11-23 10:37:19  [ LocalJobRunner Map Task Executor #0:1520 ] - [ INFO ]  (EQUATOR) 0 kvi 26214396(104857584)
+2020-11-23 10:37:19  [ LocalJobRunner Map Task Executor #0:1520 ] - [ INFO ]  mapreduce.task.io.sort.mb: 100
+2020-11-23 10:37:19  [ LocalJobRunner Map Task Executor #0:1520 ] - [ INFO ]  soft limit at 83886080
+2020-11-23 10:37:19  [ LocalJobRunner Map Task Executor #0:1520 ] - [ INFO ]  bufstart = 0; bufvoid = 104857600
+2020-11-23 10:37:19  [ LocalJobRunner Map Task Executor #0:1520 ] - [ INFO ]  kvstart = 26214396; length = 6553600
+2020-11-23 10:37:19  [ LocalJobRunner Map Task Executor #0:1523 ] - [ INFO ]  Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2020-11-23 10:37:20  [ main:2364 ] - [ INFO ]  Job job_local986362213_0001 running in uber mode : false
+2020-11-23 10:37:20  [ main:2365 ] - [ INFO ]   map 0% reduce 0%
+2020-11-23 10:37:49  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2020-11-23 10:37:50  [ main:787 ] - [ INFO ]  session.id is deprecated. Instead, use dfs.metrics.session-id
+2020-11-23 10:37:50  [ main:787 ] - [ INFO ]  Initializing JVM Metrics with processName=JobTracker, sessionId=
+2020-11-23 10:37:50  [ main:1004 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2020-11-23 10:37:50  [ main:1010 ] - [ WARN ]  No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2020-11-23 10:37:50  [ main:1050 ] - [ INFO ]  Total input paths to process : 1
+2020-11-23 10:37:50  [ main:1245 ] - [ INFO ]  number of splits:1
+2020-11-23 10:37:50  [ main:1309 ] - [ INFO ]  Submitting tokens for job: job_local741658288_0001
+2020-11-23 10:37:50  [ main:1413 ] - [ INFO ]  The url to track the job: http://localhost:8080/
+2020-11-23 10:37:50  [ main:1413 ] - [ INFO ]  Running job: job_local741658288_0001
+2020-11-23 10:37:50  [ Thread-18:1414 ] - [ INFO ]  OutputCommitter set in config null
+2020-11-23 10:37:50  [ Thread-18:1418 ] - [ INFO ]  File Output Committer Algorithm version is 1
+2020-11-23 10:37:50  [ Thread-18:1420 ] - [ INFO ]  OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2020-11-23 10:37:50  [ Thread-18:1467 ] - [ INFO ]  Waiting for map tasks
+2020-11-23 10:37:50  [ LocalJobRunner Map Task Executor #0:1467 ] - [ INFO ]  Starting task: attempt_local741658288_0001_m_000000_0
+2020-11-23 10:37:50  [ LocalJobRunner Map Task Executor #0:1486 ] - [ INFO ]  File Output Committer Algorithm version is 1
+2020-11-23 10:37:50  [ LocalJobRunner Map Task Executor #0:1490 ] - [ INFO ]  ProcfsBasedProcessTree currently is supported only on Linux.
+2020-11-23 10:37:50  [ LocalJobRunner Map Task Executor #0:1491 ] - [ INFO ]   Using ResourceCalculatorProcessTree : null
+2020-11-23 10:37:50  [ LocalJobRunner Map Task Executor #0:1497 ] - [ INFO ]  Processing split: hdfs://master:9000/user/root/mr/data/cf/data/sim_result/part-r-00000:0+8657730
+2020-11-23 10:37:51  [ LocalJobRunner Map Task Executor #0:1549 ] - [ INFO ]  (EQUATOR) 0 kvi 26214396(104857584)
+2020-11-23 10:37:51  [ LocalJobRunner Map Task Executor #0:1549 ] - [ INFO ]  mapreduce.task.io.sort.mb: 100
+2020-11-23 10:37:51  [ LocalJobRunner Map Task Executor #0:1549 ] - [ INFO ]  soft limit at 83886080
+2020-11-23 10:37:51  [ LocalJobRunner Map Task Executor #0:1549 ] - [ INFO ]  bufstart = 0; bufvoid = 104857600
+2020-11-23 10:37:51  [ LocalJobRunner Map Task Executor #0:1549 ] - [ INFO ]  kvstart = 26214396; length = 6553600
+2020-11-23 10:37:51  [ LocalJobRunner Map Task Executor #0:1552 ] - [ INFO ]  Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2020-11-23 10:37:51  [ main:2419 ] - [ INFO ]  Job job_local741658288_0001 running in uber mode : false
+2020-11-23 10:37:51  [ main:2421 ] - [ INFO ]   map 0% reduce 0%
+2020-11-23 10:41:45  [ LocalJobRunner Map Task Executor #0:235754 ] - [ INFO ]  Starting flush of map output
+2020-11-23 10:41:45  [ Thread-18:235765 ] - [ INFO ]  map task executor complete.
+2020-11-23 10:41:45  [ Thread-18:235788 ] - [ WARN ]  job_local741658288_0001
+java.lang.Exception: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@3ed50b66 rejected from java.util.concurrent.ThreadPoolExecutor@7b662617[Running, pool size = 10, active threads = 10, queued tasks = 1024, completed tasks = 0]
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@3ed50b66 rejected from java.util.concurrent.ThreadPoolExecutor@7b662617[Running, pool size = 10, active threads = 10, queued tasks = 1024, completed tasks = 0]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2063)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1379)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:112)
+	at com.satan.hadoop.cf.userCF.UserCfMapReduceJob$UserCfMapper.map(UserCfMapReduceJob.java:101)
+	at com.satan.hadoop.cf.userCF.UserCfMapReduceJob$UserCfMapper.map(UserCfMapReduceJob.java:53)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:146)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:787)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-23 10:41:45  [ main:236002 ] - [ INFO ]  Job job_local741658288_0001 failed with state FAILED due to: NA
+2020-11-23 10:41:45  [ main:236032 ] - [ INFO ]  Counters: 0
+2020-11-23 10:41:56  [ communication thread:246601 ] - [ INFO ]  map > sort
+2020-11-23 10:52:32  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2020-11-23 10:52:33  [ main:776 ] - [ INFO ]  session.id is deprecated. Instead, use dfs.metrics.session-id
+2020-11-23 10:52:33  [ main:776 ] - [ INFO ]  Initializing JVM Metrics with processName=JobTracker, sessionId=
+2020-11-23 10:52:33  [ main:999 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2020-11-23 10:52:33  [ main:1007 ] - [ WARN ]  No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2020-11-23 10:52:33  [ main:1027 ] - [ INFO ]  Total input paths to process : 1
+2020-11-23 10:52:33  [ main:1116 ] - [ INFO ]  number of splits:1
+2020-11-23 10:52:33  [ main:1182 ] - [ INFO ]  Submitting tokens for job: job_local142462578_0001
+2020-11-23 10:52:33  [ main:1282 ] - [ INFO ]  The url to track the job: http://localhost:8080/
+2020-11-23 10:52:33  [ main:1283 ] - [ INFO ]  Running job: job_local142462578_0001
+2020-11-23 10:52:33  [ Thread-18:1283 ] - [ INFO ]  OutputCommitter set in config null
+2020-11-23 10:52:33  [ Thread-18:1287 ] - [ INFO ]  File Output Committer Algorithm version is 1
+2020-11-23 10:52:33  [ Thread-18:1289 ] - [ INFO ]  OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2020-11-23 10:52:33  [ Thread-18:1336 ] - [ INFO ]  Waiting for map tasks
+2020-11-23 10:52:33  [ LocalJobRunner Map Task Executor #0:1336 ] - [ INFO ]  Starting task: attempt_local142462578_0001_m_000000_0
+2020-11-23 10:52:33  [ LocalJobRunner Map Task Executor #0:1356 ] - [ INFO ]  File Output Committer Algorithm version is 1
+2020-11-23 10:52:33  [ LocalJobRunner Map Task Executor #0:1361 ] - [ INFO ]  ProcfsBasedProcessTree currently is supported only on Linux.
+2020-11-23 10:52:33  [ LocalJobRunner Map Task Executor #0:1361 ] - [ INFO ]   Using ResourceCalculatorProcessTree : null
+2020-11-23 10:52:33  [ LocalJobRunner Map Task Executor #0:1364 ] - [ INFO ]  Processing split: hdfs://master:9000/user/root/mr/data/cf/data/sim_result/part-r-00000:0+8657730
+2020-11-23 10:52:33  [ LocalJobRunner Map Task Executor #0:1424 ] - [ INFO ]  (EQUATOR) 0 kvi 26214396(104857584)
+2020-11-23 10:52:33  [ LocalJobRunner Map Task Executor #0:1424 ] - [ INFO ]  mapreduce.task.io.sort.mb: 100
+2020-11-23 10:52:33  [ LocalJobRunner Map Task Executor #0:1424 ] - [ INFO ]  soft limit at 83886080
+2020-11-23 10:52:33  [ LocalJobRunner Map Task Executor #0:1424 ] - [ INFO ]  bufstart = 0; bufvoid = 104857600
+2020-11-23 10:52:33  [ LocalJobRunner Map Task Executor #0:1424 ] - [ INFO ]  kvstart = 26214396; length = 6553600
+2020-11-23 10:52:33  [ LocalJobRunner Map Task Executor #0:1427 ] - [ INFO ]  Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2020-11-23 10:52:34  [ main:2284 ] - [ INFO ]  Job job_local142462578_0001 running in uber mode : false
+2020-11-23 10:52:34  [ main:2286 ] - [ INFO ]   map 0% reduce 0%
+2020-11-23 10:56:33  [ communication thread:241574 ] - [ INFO ]  map > map
+2020-11-23 10:56:35  [ LocalJobRunner Map Task Executor #0:242824 ] - [ INFO ]  Starting flush of map output
+2020-11-23 10:56:35  [ Thread-18:242836 ] - [ INFO ]  map task executor complete.
+2020-11-23 10:56:35  [ Thread-18:242857 ] - [ WARN ]  job_local142462578_0001
+java.lang.Exception: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@1a899374 rejected from java.util.concurrent.ThreadPoolExecutor@6f89a09b[Running, pool size = 10, active threads = 10, queued tasks = 1022, completed tasks = 24]
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@1a899374 rejected from java.util.concurrent.ThreadPoolExecutor@6f89a09b[Running, pool size = 10, active threads = 10, queued tasks = 1022, completed tasks = 24]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2063)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1379)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:112)
+	at com.satan.hadoop.cf.userCF.UserCfMapReduceJob$UserCfMapper.map(UserCfMapReduceJob.java:103)
+	at com.satan.hadoop.cf.userCF.UserCfMapReduceJob$UserCfMapper.map(UserCfMapReduceJob.java:53)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:146)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:787)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-23 10:56:35  [ main:242878 ] - [ INFO ]  Job job_local142462578_0001 failed with state FAILED due to: NA
+2020-11-23 10:56:35  [ main:242898 ] - [ INFO ]  Counters: 23
+	File System Counters
+		FILE: Number of bytes read=187
+		FILE: Number of bytes written=284435
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=31127455
+		HDFS: Number of bytes written=0
+		HDFS: Number of read operations=12
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Map-Reduce Framework
+		Map input records=2
+		Map output records=0
+		Map output bytes=0
+		Map output materialized bytes=0
+		Input split bytes=133
+		Combine input records=0
+		Combine output records=0
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=223
+		Total committed heap usage (bytes)=1760034816
+	File Input Format Counters 
+		Bytes Read=20480
+2020-11-23 15:13:55  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2020-11-23 15:13:56  [ main:805 ] - [ INFO ]  session.id is deprecated. Instead, use dfs.metrics.session-id
+2020-11-23 15:13:56  [ main:806 ] - [ INFO ]  Initializing JVM Metrics with processName=JobTracker, sessionId=
+2020-11-23 15:13:56  [ main:1016 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2020-11-23 15:13:56  [ main:1022 ] - [ WARN ]  No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2020-11-23 15:13:56  [ main:1042 ] - [ INFO ]  Total input paths to process : 1
+2020-11-23 15:13:56  [ main:1138 ] - [ INFO ]  number of splits:1
+2020-11-23 15:13:56  [ main:1207 ] - [ INFO ]  Submitting tokens for job: job_local1647052947_0001
+2020-11-23 15:13:56  [ main:1316 ] - [ INFO ]  The url to track the job: http://localhost:8080/
+2020-11-23 15:13:56  [ main:1317 ] - [ INFO ]  Running job: job_local1647052947_0001
+2020-11-23 15:13:56  [ Thread-18:1317 ] - [ INFO ]  OutputCommitter set in config null
+2020-11-23 15:13:56  [ Thread-18:1323 ] - [ INFO ]  File Output Committer Algorithm version is 1
+2020-11-23 15:13:56  [ Thread-18:1324 ] - [ INFO ]  OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2020-11-23 15:13:56  [ Thread-18:1379 ] - [ INFO ]  Waiting for map tasks
+2020-11-23 15:13:56  [ LocalJobRunner Map Task Executor #0:1380 ] - [ INFO ]  Starting task: attempt_local1647052947_0001_m_000000_0
+2020-11-23 15:13:56  [ LocalJobRunner Map Task Executor #0:1407 ] - [ INFO ]  File Output Committer Algorithm version is 1
+2020-11-23 15:13:56  [ LocalJobRunner Map Task Executor #0:1415 ] - [ INFO ]  ProcfsBasedProcessTree currently is supported only on Linux.
+2020-11-23 15:13:56  [ LocalJobRunner Map Task Executor #0:1416 ] - [ INFO ]   Using ResourceCalculatorProcessTree : null
+2020-11-23 15:13:56  [ LocalJobRunner Map Task Executor #0:1420 ] - [ INFO ]  Processing split: hdfs://master:9000/user/root/mr/data/cf/data/sim_result/part-r-00000:0+8657730
+2020-11-23 15:13:56  [ LocalJobRunner Map Task Executor #0:1497 ] - [ INFO ]  (EQUATOR) 0 kvi 26214396(104857584)
+2020-11-23 15:13:56  [ LocalJobRunner Map Task Executor #0:1497 ] - [ INFO ]  mapreduce.task.io.sort.mb: 100
+2020-11-23 15:13:56  [ LocalJobRunner Map Task Executor #0:1497 ] - [ INFO ]  soft limit at 83886080
+2020-11-23 15:13:56  [ LocalJobRunner Map Task Executor #0:1497 ] - [ INFO ]  bufstart = 0; bufvoid = 104857600
+2020-11-23 15:13:56  [ LocalJobRunner Map Task Executor #0:1497 ] - [ INFO ]  kvstart = 26214396; length = 6553600
+2020-11-23 15:13:56  [ LocalJobRunner Map Task Executor #0:1501 ] - [ INFO ]  Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2020-11-23 15:13:57  [ main:2319 ] - [ INFO ]  Job job_local1647052947_0001 running in uber mode : false
+2020-11-23 15:13:57  [ main:2320 ] - [ INFO ]   map 0% reduce 0%
+2020-11-23 15:17:56  [ communication thread:241612 ] - [ INFO ]  map > map
+2020-11-23 15:42:57  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2020-11-23 15:42:58  [ main:1211 ] - [ INFO ]  session.id is deprecated. Instead, use dfs.metrics.session-id
+2020-11-23 15:42:58  [ main:1212 ] - [ INFO ]  Initializing JVM Metrics with processName=JobTracker, sessionId=
+2020-11-23 15:42:58  [ main:1261 ] - [ WARN ]  Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2020-11-23 15:42:58  [ main:1268 ] - [ WARN ]  No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2020-11-23 15:42:58  [ main:1289 ] - [ INFO ]  Total input paths to process : 1
+2020-11-23 15:42:58  [ main:1447 ] - [ INFO ]  number of splits:1
+2020-11-23 15:42:59  [ main:1576 ] - [ INFO ]  Submitting tokens for job: job_local1530693226_0001
+2020-11-23 15:42:59  [ main:1719 ] - [ INFO ]  The url to track the job: http://localhost:8080/
+2020-11-23 15:42:59  [ main:1720 ] - [ INFO ]  Running job: job_local1530693226_0001
+2020-11-23 15:42:59  [ Thread-35:1720 ] - [ INFO ]  OutputCommitter set in config null
+2020-11-23 15:42:59  [ Thread-35:1726 ] - [ INFO ]  File Output Committer Algorithm version is 1
+2020-11-23 15:42:59  [ Thread-35:1728 ] - [ INFO ]  OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+2020-11-23 15:42:59  [ Thread-35:1791 ] - [ INFO ]  Waiting for map tasks
+2020-11-23 15:42:59  [ LocalJobRunner Map Task Executor #0:1791 ] - [ INFO ]  Starting task: attempt_local1530693226_0001_m_000000_0
+2020-11-23 15:42:59  [ LocalJobRunner Map Task Executor #0:1820 ] - [ INFO ]  File Output Committer Algorithm version is 1
+2020-11-23 15:42:59  [ LocalJobRunner Map Task Executor #0:1828 ] - [ INFO ]  ProcfsBasedProcessTree currently is supported only on Linux.
+2020-11-23 15:42:59  [ LocalJobRunner Map Task Executor #0:1828 ] - [ INFO ]   Using ResourceCalculatorProcessTree : null
+2020-11-23 15:42:59  [ LocalJobRunner Map Task Executor #0:1895 ] - [ INFO ]  Processing split: hdfs://master:9000/user/root/mr/data/cf/data/sim_result/part-r-00000:0+8657730
+2020-11-23 15:42:59  [ LocalJobRunner Map Task Executor #0:1968 ] - [ INFO ]  (EQUATOR) 0 kvi 26214396(104857584)
+2020-11-23 15:42:59  [ LocalJobRunner Map Task Executor #0:1968 ] - [ INFO ]  mapreduce.task.io.sort.mb: 100
+2020-11-23 15:42:59  [ LocalJobRunner Map Task Executor #0:1968 ] - [ INFO ]  soft limit at 83886080
+2020-11-23 15:42:59  [ LocalJobRunner Map Task Executor #0:1968 ] - [ INFO ]  bufstart = 0; bufvoid = 104857600
+2020-11-23 15:42:59  [ LocalJobRunner Map Task Executor #0:1969 ] - [ INFO ]  kvstart = 26214396; length = 6553600
+2020-11-23 15:42:59  [ LocalJobRunner Map Task Executor #0:1973 ] - [ INFO ]  Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2020-11-23 15:43:00  [ main:2727 ] - [ INFO ]  Job job_local1530693226_0001 running in uber mode : false
+2020-11-23 15:43:00  [ main:2728 ] - [ INFO ]   map 0% reduce 0%
+2020-11-23 15:46:56  [ LocalJobRunner Map Task Executor #0:239232 ] - [ INFO ]  Starting flush of map output
+2020-11-23 15:46:56  [ Thread-35:239249 ] - [ INFO ]  map task executor complete.
+2020-11-23 15:46:57  [ Thread-35:239605 ] - [ WARN ]  job_local1530693226_0001
+java.lang.Exception: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@25dfe774 rejected from java.util.concurrent.ThreadPoolExecutor@78cba791[Running, pool size = 20, active threads = 20, queued tasks = 20, completed tasks = 0]
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:462)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:522)
+Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@25dfe774 rejected from java.util.concurrent.ThreadPoolExecutor@78cba791[Running, pool size = 20, active threads = 20, queued tasks = 20, completed tasks = 0]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2063)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1379)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:112)
+	at com.satan.hadoop.cf.userCF.UserCfMapReduceJob$UserCfMapper.map(UserCfMapReduceJob.java:103)
+	at com.satan.hadoop.cf.userCF.UserCfMapReduceJob$UserCfMapper.map(UserCfMapReduceJob.java:53)
+	at org.apache.hadoop.mapreduce.Mapper.run(Mapper.java:146)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:787)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:243)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-23 15:46:57  [ main:240432 ] - [ INFO ]  Job job_local1530693226_0001 failed with state FAILED due to: NA
+2020-11-23 15:46:57  [ main:240459 ] - [ INFO ]  Counters: 0
+2020-11-23 15:47:02  [ communication thread:245095 ] - [ INFO ]  map > sort
