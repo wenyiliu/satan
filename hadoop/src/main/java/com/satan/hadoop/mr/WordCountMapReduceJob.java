@@ -24,6 +24,8 @@ public class WordCountMapReduceJob {
 
     private static final Logger LOG = LoggerFactory.getLogger(WordCountMapReduceJob.class);
 
+    private static final IntWritable ONE = new IntWritable(1);
+
     public static class WordCountMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
         @Override
         protected void map(LongWritable key, Text value, final Context context) {
@@ -34,7 +36,7 @@ public class WordCountMapReduceJob {
             List<String> valueList = Lists.newArrayList(CommonUtil.replacePunctuation(textValue).split(" "));
             valueList.forEach(s -> {
                 try {
-                    context.write(new Text(s), new IntWritable(1));
+                    context.write(new Text(s), ONE);
                 } catch (Exception e) {
                     LOG.error("map 读取数据失败 ", e);
                 }
@@ -69,7 +71,6 @@ public class WordCountMapReduceJob {
         RunJobParam build = RunJobParam.builder()
                 .inputPath(inputPath)
                 .outputPath(outputPath)
-                .jarClass(WordCountMapReduceJob.class)
                 .mapperClass(WordCountMapper.class)
                 .mapOutputKeyClass(Text.class)
                 .mapOutputValueClass(IntWritable.class)
@@ -82,8 +83,8 @@ public class WordCountMapReduceJob {
     }
 
     public static void main(String[] args) throws Exception {
-        String inputPath = "/user/root/mr/data/word_count/test.txt";
-        String outputPath = "/user/root/mr/word_count/output/result";
+        String inputPath = "/user/root/order.txt";
+        String outputPath = "/user/root/order_result";
         if (args.length >= 2) {
             inputPath = args[0];
             outputPath = args[1];

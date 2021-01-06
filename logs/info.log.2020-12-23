@@ -1,0 +1,140 @@
+2020-12-23 18:55:50  [ main:0 ] - [ WARN ]  Your hostname, liuwenyideMacBook-Pro.local resolves to a loopback address: 127.0.0.1; using 192.168.3.166 instead (on interface en0)
+2020-12-23 18:55:50  [ main:2 ] - [ WARN ]  Set SPARK_LOCAL_IP if you need to bind to another address
+2020-12-23 18:55:50  [ main:51 ] - [ INFO ]  Running Spark version 2.4.4
+2020-12-23 18:55:50  [ main:288 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2020-12-23 18:55:50  [ main:372 ] - [ INFO ]  Submitted application: test
+2020-12-23 18:55:50  [ main:422 ] - [ INFO ]  Changing view acls to: liuwenyi,root
+2020-12-23 18:55:50  [ main:422 ] - [ INFO ]  Changing modify acls to: liuwenyi,root
+2020-12-23 18:55:50  [ main:423 ] - [ INFO ]  Changing view acls groups to: 
+2020-12-23 18:55:50  [ main:424 ] - [ INFO ]  Changing modify acls groups to: 
+2020-12-23 18:55:50  [ main:424 ] - [ INFO ]  SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(liuwenyi, root); groups with view permissions: Set(); users  with modify permissions: Set(liuwenyi, root); groups with modify permissions: Set()
+2020-12-23 18:55:51  [ main:727 ] - [ INFO ]  Successfully started service 'sparkDriver' on port 58002.
+2020-12-23 18:55:51  [ main:748 ] - [ INFO ]  Registering MapOutputTracker
+2020-12-23 18:55:51  [ main:763 ] - [ INFO ]  Registering BlockManagerMaster
+2020-12-23 18:55:51  [ main:765 ] - [ INFO ]  Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2020-12-23 18:55:51  [ main:765 ] - [ INFO ]  BlockManagerMasterEndpoint up
+2020-12-23 18:55:51  [ main:778 ] - [ INFO ]  Created local directory at /private/var/folders/y1/26k_xzzj321fz8xhvjvvdd4c0000gn/T/blockmgr-b2cb194f-464d-4fc1-8cf9-4a46e36e4b6d
+2020-12-23 18:55:51  [ main:802 ] - [ INFO ]  MemoryStore started with capacity 2004.6 MB
+2020-12-23 18:55:51  [ main:815 ] - [ INFO ]  Registering OutputCommitCoordinator
+2020-12-23 18:55:51  [ main:888 ] - [ INFO ]  Logging initialized @1700ms
+2020-12-23 18:55:51  [ main:933 ] - [ INFO ]  jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+2020-12-23 18:55:51  [ main:945 ] - [ INFO ]  Started @1758ms
+2020-12-23 18:55:51  [ main:959 ] - [ INFO ]  Started ServerConnector@630cb4a4{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2020-12-23 18:55:51  [ main:959 ] - [ INFO ]  Successfully started service 'SparkUI' on port 4040.
+2020-12-23 18:55:51  [ main:978 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@76f7d241{/jobs,null,AVAILABLE,@Spark}
+2020-12-23 18:55:51  [ main:979 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@29e6eb25{/jobs/json,null,AVAILABLE,@Spark}
+2020-12-23 18:55:51  [ main:979 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@62435e70{/jobs/job,null,AVAILABLE,@Spark}
+2020-12-23 18:55:51  [ main:980 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@38be305c{/jobs/job/json,null,AVAILABLE,@Spark}
+2020-12-23 18:55:51  [ main:981 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@269f4bad{/stages,null,AVAILABLE,@Spark}
+2020-12-23 18:55:51  [ main:981 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@5ed731d0{/stages/json,null,AVAILABLE,@Spark}
+2020-12-23 18:55:51  [ main:982 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@3234f74e{/stages/stage,null,AVAILABLE,@Spark}
+2020-12-23 18:55:51  [ main:983 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@40e10ff8{/stages/stage/json,null,AVAILABLE,@Spark}
+2020-12-23 18:55:51  [ main:983 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@557a1e2d{/stages/pool,null,AVAILABLE,@Spark}
+2020-12-23 18:55:51  [ main:984 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@26a4842b{/stages/pool/json,null,AVAILABLE,@Spark}
+2020-12-23 18:55:51  [ main:985 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@7e38a7fe{/storage,null,AVAILABLE,@Spark}
+2020-12-23 18:55:51  [ main:985 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@366ef90e{/storage/json,null,AVAILABLE,@Spark}
+2020-12-23 18:55:51  [ main:986 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@33e01298{/storage/rdd,null,AVAILABLE,@Spark}
+2020-12-23 18:55:51  [ main:986 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@31e75d13{/storage/rdd/json,null,AVAILABLE,@Spark}
+2020-12-23 18:55:51  [ main:987 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@a5b0b86{/environment,null,AVAILABLE,@Spark}
+2020-12-23 18:55:51  [ main:987 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@4b3c354a{/environment/json,null,AVAILABLE,@Spark}
+2020-12-23 18:55:51  [ main:988 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@78fb9a67{/executors,null,AVAILABLE,@Spark}
+2020-12-23 18:55:51  [ main:988 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@73ff4fae{/executors/json,null,AVAILABLE,@Spark}
+2020-12-23 18:55:51  [ main:989 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@21aa6d6c{/executors/threadDump,null,AVAILABLE,@Spark}
+2020-12-23 18:55:51  [ main:989 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@b968a76{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2020-12-23 18:55:51  [ main:994 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@2f9a01c1{/static,null,AVAILABLE,@Spark}
+2020-12-23 18:55:51  [ main:995 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@56f6d40b{/,null,AVAILABLE,@Spark}
+2020-12-23 18:55:51  [ main:995 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@36676c1a{/api,null,AVAILABLE,@Spark}
+2020-12-23 18:55:51  [ main:996 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@20b5f2ac{/jobs/job/kill,null,AVAILABLE,@Spark}
+2020-12-23 18:55:51  [ main:996 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@7fc44dec{/stages/stage/kill,null,AVAILABLE,@Spark}
+2020-12-23 18:55:51  [ main:997 ] - [ INFO ]  Bound SparkUI to 0.0.0.0, and started at http://192.168.3.166:4040
+2020-12-23 18:55:51  [ main:1083 ] - [ INFO ]  Starting executor ID driver on host localhost
+2020-12-23 18:55:51  [ main:1132 ] - [ INFO ]  Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 58003.
+2020-12-23 18:55:51  [ main:1133 ] - [ INFO ]  Server created on 192.168.3.166:58003
+2020-12-23 18:55:51  [ main:1134 ] - [ INFO ]  Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2020-12-23 18:55:51  [ main:1149 ] - [ INFO ]  Registering BlockManager BlockManagerId(driver, 192.168.3.166, 58003, None)
+2020-12-23 18:55:51  [ dispatcher-event-loop-10:1152 ] - [ INFO ]  Registering block manager 192.168.3.166:58003 with 2004.6 MB RAM, BlockManagerId(driver, 192.168.3.166, 58003, None)
+2020-12-23 18:55:51  [ main:1153 ] - [ INFO ]  Registered BlockManager BlockManagerId(driver, 192.168.3.166, 58003, None)
+2020-12-23 18:55:51  [ main:1154 ] - [ INFO ]  Initialized BlockManager: BlockManagerId(driver, 192.168.3.166, 58003, None)
+2020-12-23 18:55:51  [ main:1257 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@1c65121{/metrics/json,null,AVAILABLE,@Spark}
+2020-12-23 18:55:52  [ main:1495 ] - [ INFO ]  3
+2020-12-23 18:55:52  [ Thread-1:1497 ] - [ INFO ]  Invoking stop() from shutdown hook
+2020-12-23 18:55:52  [ Thread-1:1506 ] - [ INFO ]  Stopped Spark@630cb4a4{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2020-12-23 18:55:52  [ Thread-1:1507 ] - [ INFO ]  Stopped Spark web UI at http://192.168.3.166:4040
+2020-12-23 18:55:52  [ dispatcher-event-loop-14:1515 ] - [ INFO ]  MapOutputTrackerMasterEndpoint stopped!
+2020-12-23 18:55:52  [ Thread-1:1525 ] - [ INFO ]  MemoryStore cleared
+2020-12-23 18:55:52  [ Thread-1:1525 ] - [ INFO ]  BlockManager stopped
+2020-12-23 18:55:52  [ Thread-1:1529 ] - [ INFO ]  BlockManagerMaster stopped
+2020-12-23 18:55:52  [ dispatcher-event-loop-3:1531 ] - [ INFO ]  OutputCommitCoordinator stopped!
+2020-12-23 18:55:52  [ Thread-1:1538 ] - [ INFO ]  Successfully stopped SparkContext
+2020-12-23 18:55:52  [ Thread-1:1538 ] - [ INFO ]  Shutdown hook called
+2020-12-23 18:55:52  [ Thread-1:1539 ] - [ INFO ]  Deleting directory /private/var/folders/y1/26k_xzzj321fz8xhvjvvdd4c0000gn/T/spark-92f0b36a-5ef2-4132-8d9e-464e41e24d36
+2020-12-23 18:56:08  [ main:0 ] - [ WARN ]  Your hostname, liuwenyideMacBook-Pro.local resolves to a loopback address: 127.0.0.1; using 192.168.3.166 instead (on interface en0)
+2020-12-23 18:56:08  [ main:1 ] - [ WARN ]  Set SPARK_LOCAL_IP if you need to bind to another address
+2020-12-23 18:56:09  [ main:51 ] - [ INFO ]  Running Spark version 2.4.4
+2020-12-23 18:56:09  [ main:296 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2020-12-23 18:56:09  [ main:385 ] - [ INFO ]  Submitted application: test
+2020-12-23 18:56:09  [ main:434 ] - [ INFO ]  Changing view acls to: liuwenyi,root
+2020-12-23 18:56:09  [ main:435 ] - [ INFO ]  Changing modify acls to: liuwenyi,root
+2020-12-23 18:56:09  [ main:435 ] - [ INFO ]  Changing view acls groups to: 
+2020-12-23 18:56:09  [ main:436 ] - [ INFO ]  Changing modify acls groups to: 
+2020-12-23 18:56:09  [ main:436 ] - [ INFO ]  SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(liuwenyi, root); groups with view permissions: Set(); users  with modify permissions: Set(liuwenyi, root); groups with modify permissions: Set()
+2020-12-23 18:56:09  [ main:801 ] - [ INFO ]  Successfully started service 'sparkDriver' on port 58013.
+2020-12-23 18:56:09  [ main:955 ] - [ INFO ]  Registering MapOutputTracker
+2020-12-23 18:56:09  [ main:982 ] - [ INFO ]  Registering BlockManagerMaster
+2020-12-23 18:56:09  [ main:985 ] - [ INFO ]  Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2020-12-23 18:56:09  [ main:985 ] - [ INFO ]  BlockManagerMasterEndpoint up
+2020-12-23 18:56:09  [ main:1014 ] - [ INFO ]  Created local directory at /private/var/folders/y1/26k_xzzj321fz8xhvjvvdd4c0000gn/T/blockmgr-4b582c05-4cdb-45ab-9169-a4b959f5244f
+2020-12-23 18:56:10  [ main:1067 ] - [ INFO ]  MemoryStore started with capacity 2004.6 MB
+2020-12-23 18:56:10  [ main:1101 ] - [ INFO ]  Registering OutputCommitCoordinator
+2020-12-23 18:56:10  [ main:1178 ] - [ INFO ]  Logging initialized @1979ms
+2020-12-23 18:56:10  [ main:1222 ] - [ INFO ]  jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+2020-12-23 18:56:10  [ main:1233 ] - [ INFO ]  Started @2035ms
+2020-12-23 18:56:10  [ main:1247 ] - [ INFO ]  Started ServerConnector@630cb4a4{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2020-12-23 18:56:10  [ main:1247 ] - [ INFO ]  Successfully started service 'SparkUI' on port 4040.
+2020-12-23 18:56:10  [ main:1264 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@76f7d241{/jobs,null,AVAILABLE,@Spark}
+2020-12-23 18:56:10  [ main:1265 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@29e6eb25{/jobs/json,null,AVAILABLE,@Spark}
+2020-12-23 18:56:10  [ main:1265 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@62435e70{/jobs/job,null,AVAILABLE,@Spark}
+2020-12-23 18:56:10  [ main:1266 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@38be305c{/jobs/job/json,null,AVAILABLE,@Spark}
+2020-12-23 18:56:10  [ main:1266 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@269f4bad{/stages,null,AVAILABLE,@Spark}
+2020-12-23 18:56:10  [ main:1267 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@5ed731d0{/stages/json,null,AVAILABLE,@Spark}
+2020-12-23 18:56:10  [ main:1267 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@3234f74e{/stages/stage,null,AVAILABLE,@Spark}
+2020-12-23 18:56:10  [ main:1268 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@40e10ff8{/stages/stage/json,null,AVAILABLE,@Spark}
+2020-12-23 18:56:10  [ main:1268 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@557a1e2d{/stages/pool,null,AVAILABLE,@Spark}
+2020-12-23 18:56:10  [ main:1269 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@26a4842b{/stages/pool/json,null,AVAILABLE,@Spark}
+2020-12-23 18:56:10  [ main:1269 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@7e38a7fe{/storage,null,AVAILABLE,@Spark}
+2020-12-23 18:56:10  [ main:1270 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@366ef90e{/storage/json,null,AVAILABLE,@Spark}
+2020-12-23 18:56:10  [ main:1270 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@33e01298{/storage/rdd,null,AVAILABLE,@Spark}
+2020-12-23 18:56:10  [ main:1271 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@31e75d13{/storage/rdd/json,null,AVAILABLE,@Spark}
+2020-12-23 18:56:10  [ main:1272 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@a5b0b86{/environment,null,AVAILABLE,@Spark}
+2020-12-23 18:56:10  [ main:1272 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@4b3c354a{/environment/json,null,AVAILABLE,@Spark}
+2020-12-23 18:56:10  [ main:1273 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@78fb9a67{/executors,null,AVAILABLE,@Spark}
+2020-12-23 18:56:10  [ main:1273 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@73ff4fae{/executors/json,null,AVAILABLE,@Spark}
+2020-12-23 18:56:10  [ main:1274 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@21aa6d6c{/executors/threadDump,null,AVAILABLE,@Spark}
+2020-12-23 18:56:10  [ main:1274 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@b968a76{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2020-12-23 18:56:10  [ main:1280 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@2f9a01c1{/static,null,AVAILABLE,@Spark}
+2020-12-23 18:56:10  [ main:1280 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@56f6d40b{/,null,AVAILABLE,@Spark}
+2020-12-23 18:56:10  [ main:1281 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@36676c1a{/api,null,AVAILABLE,@Spark}
+2020-12-23 18:56:10  [ main:1282 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@20b5f2ac{/jobs/job/kill,null,AVAILABLE,@Spark}
+2020-12-23 18:56:10  [ main:1282 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@7fc44dec{/stages/stage/kill,null,AVAILABLE,@Spark}
+2020-12-23 18:56:10  [ main:1283 ] - [ INFO ]  Bound SparkUI to 0.0.0.0, and started at http://192.168.3.166:4040
+2020-12-23 18:56:10  [ main:1382 ] - [ INFO ]  Starting executor ID driver on host localhost
+2020-12-23 18:56:10  [ main:1448 ] - [ INFO ]  Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 58014.
+2020-12-23 18:56:10  [ main:1448 ] - [ INFO ]  Server created on 192.168.3.166:58014
+2020-12-23 18:56:10  [ main:1449 ] - [ INFO ]  Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2020-12-23 18:56:10  [ main:1467 ] - [ INFO ]  Registering BlockManager BlockManagerId(driver, 192.168.3.166, 58014, None)
+2020-12-23 18:56:10  [ dispatcher-event-loop-10:1471 ] - [ INFO ]  Registering block manager 192.168.3.166:58014 with 2004.6 MB RAM, BlockManagerId(driver, 192.168.3.166, 58014, None)
+2020-12-23 18:56:10  [ main:1473 ] - [ INFO ]  Registered BlockManager BlockManagerId(driver, 192.168.3.166, 58014, None)
+2020-12-23 18:56:10  [ main:1473 ] - [ INFO ]  Initialized BlockManager: BlockManagerId(driver, 192.168.3.166, 58014, None)
+2020-12-23 18:56:10  [ main:1582 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@1c65121{/metrics/json,null,AVAILABLE,@Spark}
+2020-12-23 18:56:10  [ main:1832 ] - [ ERROR ]  3
+2020-12-23 18:56:10  [ Thread-1:1836 ] - [ INFO ]  Invoking stop() from shutdown hook
+2020-12-23 18:56:10  [ Thread-1:1845 ] - [ INFO ]  Stopped Spark@630cb4a4{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2020-12-23 18:56:10  [ Thread-1:1846 ] - [ INFO ]  Stopped Spark web UI at http://192.168.3.166:4040
+2020-12-23 18:56:10  [ dispatcher-event-loop-14:1855 ] - [ INFO ]  MapOutputTrackerMasterEndpoint stopped!
+2020-12-23 18:56:10  [ Thread-1:1865 ] - [ INFO ]  MemoryStore cleared
+2020-12-23 18:56:10  [ Thread-1:1866 ] - [ INFO ]  BlockManager stopped
+2020-12-23 18:56:10  [ Thread-1:1869 ] - [ INFO ]  BlockManagerMaster stopped
+2020-12-23 18:56:10  [ dispatcher-event-loop-3:1872 ] - [ INFO ]  OutputCommitCoordinator stopped!
+2020-12-23 18:56:10  [ Thread-1:1879 ] - [ INFO ]  Successfully stopped SparkContext
+2020-12-23 18:56:10  [ Thread-1:1879 ] - [ INFO ]  Shutdown hook called
+2020-12-23 18:56:10  [ Thread-1:1880 ] - [ INFO ]  Deleting directory /private/var/folders/y1/26k_xzzj321fz8xhvjvvdd4c0000gn/T/spark-c1ea967a-3cbe-4b2d-98d6-e7f6498e6dfd

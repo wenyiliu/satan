@@ -1,12 +1,26 @@
-2020-11-20 12:40:59  [ Thread-2:41408 ] - [ ERROR ]  Failed to close inode 29185
-java.io.IOException: Failed to replace a bad datanode on the existing pipeline due to no more good datanodes being available to try. (Nodes: current=[DatanodeInfoWithStorage[172.16.244.144:50010,DS-de009a19-f06b-42e8-8e88-0ffc39f5f26d,DISK]], original=[DatanodeInfoWithStorage[172.16.244.144:50010,DS-de009a19-f06b-42e8-8e88-0ffc39f5f26d,DISK]]). The current failed datanode replacement policy is DEFAULT, and a client may configure this via 'dfs.client.block.write.replace-datanode-on-failure.policy' in its configuration.
-	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.findNewDatanode(DFSOutputStream.java:925)
-	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.addDatanode2ExistingPipeline(DFSOutputStream.java:988)
-	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.setupPipelineForAppendOrRecovery(DFSOutputStream.java:1156)
-	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:454)
-2020-11-20 13:35:25  [ Thread-19:31949 ] - [ ERROR ]  Failed to close inode 30475
-java.io.IOException: Failed to replace a bad datanode on the existing pipeline due to no more good datanodes being available to try. (Nodes: current=[DatanodeInfoWithStorage[172.16.244.144:50010,DS-de009a19-f06b-42e8-8e88-0ffc39f5f26d,DISK]], original=[DatanodeInfoWithStorage[172.16.244.144:50010,DS-de009a19-f06b-42e8-8e88-0ffc39f5f26d,DISK]]). The current failed datanode replacement policy is DEFAULT, and a client may configure this via 'dfs.client.block.write.replace-datanode-on-failure.policy' in its configuration.
-	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.findNewDatanode(DFSOutputStream.java:925)
-	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.addDatanode2ExistingPipeline(DFSOutputStream.java:988)
-	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.setupPipelineForAppendOrRecovery(DFSOutputStream.java:1156)
-	at org.apache.hadoop.hdfs.DFSOutputStream$DataStreamer.run(DFSOutputStream.java:454)
+2021-01-06 09:43:52  [ Executor task launch worker for task 0:2536 ] - [ ERROR ]  Exception in task 0.0 in stage 0.0 (TID 0)
+java.lang.NumberFormatException: For input string: "id"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at scala.collection.immutable.StringLike$class.toInt(StringLike.scala:272)
+	at scala.collection.immutable.StringOps.toInt(StringOps.scala:29)
+	at sparkCore.userLog.UserLog$.line2UserLogItem(UserLog.scala:14)
+	at sparkCore.userLog.UserLog$$anonfun$2.apply(UserLog.scala:37)
+	at sparkCore.userLog.UserLog$$anonfun$2.apply(UserLog.scala:37)
+	at scala.collection.Iterator$$anon$11.next(Iterator.scala:409)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at org.apache.spark.rdd.RDD$$anonfun$foreach$1$$anonfun$apply$27.apply(RDD.scala:927)
+	at org.apache.spark.rdd.RDD$$anonfun$foreach$1$$anonfun$apply$27.apply(RDD.scala:927)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.SparkContext$$anonfun$runJob$5.apply(SparkContext.scala:2101)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:123)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$10.apply(Executor.scala:408)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1360)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:414)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2021-01-06 09:43:52  [ task-result-getter-0:2601 ] - [ ERROR ]  Task 0 in stage 0.0 failed 1 times; aborting job

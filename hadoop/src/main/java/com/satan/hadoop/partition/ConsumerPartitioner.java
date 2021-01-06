@@ -1,6 +1,5 @@
 package com.satan.hadoop.partition;
 
-import com.satan.hadoop.Test;
 import com.satan.hadoop.model.result.ConsumerBO;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Partitioner;
