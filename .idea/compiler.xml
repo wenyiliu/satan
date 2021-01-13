@@ -12,6 +12,7 @@
         <module name="hadoop" />
         <module name="common" />
         <module name="spark" />
+        <module name="recommand" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8" />

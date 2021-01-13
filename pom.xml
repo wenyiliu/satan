@@ -15,6 +15,7 @@
         <module>spark</module>
         <module>common</module>
         <module>flink</module>
+        <module>recommand</module>
     </modules>
 
 </project>

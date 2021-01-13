@@ -2,57 +2,33 @@ package sparkCore.userLog
 
 import org.apache.spark.util.AccumulatorV2
 
-import scala.collection.mutable
-
 
 /**
  * @author liuwenyi
  * @date 2021/01/04
  */
-class ItemAcc extends AccumulatorV2[UserLogItem, mutable.Map[String, Long]] {
+class ItemAcc extends AccumulatorV2[Int, Int] {
 
-  item =>
+  private var sum = 0
 
-  private val map: mutable.Map[String, Long] = mutable.Map[String, Long]()
+  // 判断是否是初始状态，sum 为 0 时表示累加器为初始状态
+  override def isZero: Boolean = sum == 0
 
-  override def isZero: Boolean = map.isEmpty
-
-  override def copy(): AccumulatorV2[UserLogItem, mutable.Map[String, Long]] = {
-    val categoryAcc = new ItemAcc()
-    map.synchronized(categoryAcc.map ++= map)
-    categoryAcc
+  // 执行器 executor 执行时需要拷贝累加器对象，把累加器对象序列化之后，从 driver 传到 executor
+  override def copy(): AccumulatorV2[Int, Int] = {
+    val acc = new ItemAcc()
+    acc
   }
 
-  override def reset(): Unit = map.clear()
+  // 重置数据
+  override def reset(): Unit = sum = 0
 
-  override def add(v: UserLogItem): Unit = {
-    val uid = v.guid
-    v.target match {
-      case 1 =>
-        val key = uid + "_click"
-        map += key -> (map.getOrElse(key, 0L) + 1L)
-      case 0 =>
-        val key = uid + "_nonClick"
-        map += key -> (map.getOrElse(key, 0L) + 1L)
-      case _ =>
-    }
-  }
+  // 累加数据
+  override def add(v: Int): Unit = sum += v
 
-  override def merge(other: AccumulatorV2[UserLogItem, mutable.Map[String, Long]]): Unit = {
-    other match {
-      case mergeItem: ItemAcc =>
-        mergeItem.map.foreach {
-          case (k, v) =>
-            item.map += k -> (item.map.getOrElse(k, 0L) + v)
-        }
-        item.map ++= mergeItem.map.foldLeft(item.map) {
-          case (map, (cidAction, count)) =>
-            map += cidAction -> (map.getOrElse(cidAction, 0L) + count)
-            map
-        }
-      case _ =>
-    }
-  }
+  // 合并数据，所有的 executor 中累加器 value 合并
+  override def merge(other: AccumulatorV2[Int, Int]): Unit = sum += other.value
 
-  override def value: mutable.Map[String, Long] = map
+  // 累加器的结果
+  override def value: Int = sum
 }

@@ -1,0 +1,300 @@
+2021-01-07 10:00:42  [ main:0 ] - [ WARN ]  Your hostname, liuwenyideMacBook-Pro.local resolves to a loopback address: 127.0.0.1; using 192.168.3.166 instead (on interface en0)
+2021-01-07 10:00:42  [ main:1 ] - [ WARN ]  Set SPARK_LOCAL_IP if you need to bind to another address
+2021-01-07 10:00:42  [ main:50 ] - [ INFO ]  Running Spark version 2.4.4
+2021-01-07 10:00:42  [ main:333 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2021-01-07 10:00:42  [ main:483 ] - [ INFO ]  Submitted application: broadcast_test
+2021-01-07 10:00:42  [ main:549 ] - [ INFO ]  Changing view acls to: liuwenyi,root
+2021-01-07 10:00:42  [ main:549 ] - [ INFO ]  Changing modify acls to: liuwenyi,root
+2021-01-07 10:00:42  [ main:550 ] - [ INFO ]  Changing view acls groups to: 
+2021-01-07 10:00:42  [ main:550 ] - [ INFO ]  Changing modify acls groups to: 
+2021-01-07 10:00:42  [ main:550 ] - [ INFO ]  SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(liuwenyi, root); groups with view permissions: Set(); users  with modify permissions: Set(liuwenyi, root); groups with modify permissions: Set()
+2021-01-07 10:00:42  [ main:850 ] - [ INFO ]  Successfully started service 'sparkDriver' on port 63604.
+2021-01-07 10:00:42  [ main:879 ] - [ INFO ]  Registering MapOutputTracker
+2021-01-07 10:00:42  [ main:902 ] - [ INFO ]  Registering BlockManagerMaster
+2021-01-07 10:00:42  [ main:905 ] - [ INFO ]  Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2021-01-07 10:00:42  [ main:906 ] - [ INFO ]  BlockManagerMasterEndpoint up
+2021-01-07 10:00:42  [ main:945 ] - [ INFO ]  Created local directory at /private/var/folders/y1/26k_xzzj321fz8xhvjvvdd4c0000gn/T/blockmgr-ba9c14b2-2026-411d-a1f0-054ac58e1071
+2021-01-07 10:00:42  [ main:969 ] - [ INFO ]  MemoryStore started with capacity 2004.6 MB
+2021-01-07 10:00:43  [ main:984 ] - [ INFO ]  Registering OutputCommitCoordinator
+2021-01-07 10:00:43  [ main:1060 ] - [ INFO ]  Logging initialized @1864ms
+2021-01-07 10:00:43  [ main:1110 ] - [ INFO ]  jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+2021-01-07 10:00:43  [ main:1123 ] - [ INFO ]  Started @1928ms
+2021-01-07 10:00:43  [ main:1139 ] - [ INFO ]  Started ServerConnector@77192705{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2021-01-07 10:00:43  [ main:1139 ] - [ INFO ]  Successfully started service 'SparkUI' on port 4040.
+2021-01-07 10:00:43  [ main:1160 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@26fb628{/jobs,null,AVAILABLE,@Spark}
+2021-01-07 10:00:43  [ main:1161 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@4204541c{/jobs/json,null,AVAILABLE,@Spark}
+2021-01-07 10:00:43  [ main:1162 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@6a62689d{/jobs/job,null,AVAILABLE,@Spark}
+2021-01-07 10:00:43  [ main:1163 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@60fa3495{/jobs/job/json,null,AVAILABLE,@Spark}
+2021-01-07 10:00:43  [ main:1163 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@3e2822{/stages,null,AVAILABLE,@Spark}
+2021-01-07 10:00:43  [ main:1164 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@79e18e38{/stages/json,null,AVAILABLE,@Spark}
+2021-01-07 10:00:43  [ main:1164 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@29a60c27{/stages/stage,null,AVAILABLE,@Spark}
+2021-01-07 10:00:43  [ main:1165 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@1ca25c47{/stages/stage/json,null,AVAILABLE,@Spark}
+2021-01-07 10:00:43  [ main:1166 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@5fcacc0{/stages/pool,null,AVAILABLE,@Spark}
+2021-01-07 10:00:43  [ main:1167 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@533b266e{/stages/pool/json,null,AVAILABLE,@Spark}
+2021-01-07 10:00:43  [ main:1167 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@6d1d4d7{/storage,null,AVAILABLE,@Spark}
+2021-01-07 10:00:43  [ main:1168 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@89ff02e{/storage/json,null,AVAILABLE,@Spark}
+2021-01-07 10:00:43  [ main:1169 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@6865c751{/storage/rdd,null,AVAILABLE,@Spark}
+2021-01-07 10:00:43  [ main:1169 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@62679465{/storage/rdd/json,null,AVAILABLE,@Spark}
+2021-01-07 10:00:43  [ main:1170 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@6a988392{/environment,null,AVAILABLE,@Spark}
+2021-01-07 10:00:43  [ main:1170 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@1d71006f{/environment/json,null,AVAILABLE,@Spark}
+2021-01-07 10:00:43  [ main:1171 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@5b6813df{/executors,null,AVAILABLE,@Spark}
+2021-01-07 10:00:43  [ main:1171 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@5f2606b{/executors/json,null,AVAILABLE,@Spark}
+2021-01-07 10:00:43  [ main:1172 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@2b58f754{/executors/threadDump,null,AVAILABLE,@Spark}
+2021-01-07 10:00:43  [ main:1172 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@3ebff828{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2021-01-07 10:00:43  [ main:1179 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@2552f2cb{/static,null,AVAILABLE,@Spark}
+2021-01-07 10:00:43  [ main:1180 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@495083a0{/,null,AVAILABLE,@Spark}
+2021-01-07 10:00:43  [ main:1181 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@5fd62371{/api,null,AVAILABLE,@Spark}
+2021-01-07 10:00:43  [ main:1182 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@841e575{/jobs/job/kill,null,AVAILABLE,@Spark}
+2021-01-07 10:00:43  [ main:1183 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@27a5328c{/stages/stage/kill,null,AVAILABLE,@Spark}
+2021-01-07 10:00:43  [ main:1184 ] - [ INFO ]  Bound SparkUI to 0.0.0.0, and started at http://192.168.3.166:4040
+2021-01-07 10:00:43  [ main:1266 ] - [ INFO ]  Starting executor ID driver on host localhost
+2021-01-07 10:00:43  [ main:1332 ] - [ INFO ]  Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 63605.
+2021-01-07 10:00:43  [ main:1333 ] - [ INFO ]  Server created on 192.168.3.166:63605
+2021-01-07 10:00:43  [ main:1334 ] - [ INFO ]  Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2021-01-07 10:00:43  [ main:1359 ] - [ INFO ]  Registering BlockManager BlockManagerId(driver, 192.168.3.166, 63605, None)
+2021-01-07 10:00:43  [ dispatcher-event-loop-10:1362 ] - [ INFO ]  Registering block manager 192.168.3.166:63605 with 2004.6 MB RAM, BlockManagerId(driver, 192.168.3.166, 63605, None)
+2021-01-07 10:00:43  [ main:1365 ] - [ INFO ]  Registered BlockManager BlockManagerId(driver, 192.168.3.166, 63605, None)
+2021-01-07 10:00:43  [ main:1365 ] - [ INFO ]  Initialized BlockManager: BlockManagerId(driver, 192.168.3.166, 63605, None)
+2021-01-07 10:00:43  [ main:1521 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@4aeaadc1{/metrics/json,null,AVAILABLE,@Spark}
+2021-01-07 10:00:43  [ main:1602 ] - [ INFO ]  Block broadcast_0 stored as values in memory (estimated size 64.0 B, free 2004.6 MB)
+2021-01-07 10:00:43  [ main:1755 ] - [ INFO ]  Block broadcast_0_piece0 stored as bytes in memory (estimated size 89.0 B, free 2004.6 MB)
+2021-01-07 10:00:43  [ dispatcher-event-loop-12:1756 ] - [ INFO ]  Added broadcast_0_piece0 in memory on 192.168.3.166:63605 (size: 89.0 B, free: 2004.6 MB)
+2021-01-07 10:00:43  [ main:1760 ] - [ INFO ]  Created broadcast 0 from broadcast at BroadcastTest.scala:15
+2021-01-07 10:00:43  [ main:1775 ] - [ INFO ]  Destroying Broadcast(0) (from destroy at BroadcastTest.scala:17)
+2021-01-07 10:00:43  [ dispatcher-event-loop-15:1790 ] - [ INFO ]  Removed broadcast_0_piece0 on 192.168.3.166:63605 in memory (size: 89.0 B, free: 2004.6 MB)
+2021-01-07 10:00:43  [ Thread-1:1793 ] - [ INFO ]  Invoking stop() from shutdown hook
+2021-01-07 10:00:43  [ Thread-1:1804 ] - [ INFO ]  Stopped Spark@77192705{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2021-01-07 10:00:43  [ Thread-1:1805 ] - [ INFO ]  Stopped Spark web UI at http://192.168.3.166:4040
+2021-01-07 10:00:43  [ dispatcher-event-loop-2:1813 ] - [ INFO ]  MapOutputTrackerMasterEndpoint stopped!
+2021-01-07 10:00:43  [ Thread-1:1822 ] - [ INFO ]  MemoryStore cleared
+2021-01-07 10:00:43  [ Thread-1:1823 ] - [ INFO ]  BlockManager stopped
+2021-01-07 10:00:43  [ Thread-1:1824 ] - [ INFO ]  BlockManagerMaster stopped
+2021-01-07 10:00:43  [ dispatcher-event-loop-7:1826 ] - [ INFO ]  OutputCommitCoordinator stopped!
+2021-01-07 10:00:43  [ Thread-1:1832 ] - [ INFO ]  Successfully stopped SparkContext
+2021-01-07 10:00:43  [ Thread-1:1833 ] - [ INFO ]  Shutdown hook called
+2021-01-07 10:00:43  [ Thread-1:1833 ] - [ INFO ]  Deleting directory /private/var/folders/y1/26k_xzzj321fz8xhvjvvdd4c0000gn/T/spark-40243ae5-8424-4549-b96c-0f329f49dfc6
+2021-01-07 17:15:02  [ main:0 ] - [ WARN ]  Your hostname, liuwenyideMacBook-Pro.local resolves to a loopback address: 127.0.0.1; using 192.168.3.166 instead (on interface en0)
+2021-01-07 17:15:02  [ main:2 ] - [ WARN ]  Set SPARK_LOCAL_IP if you need to bind to another address
+2021-01-07 17:15:02  [ main:53 ] - [ INFO ]  Running Spark version 2.4.4
+2021-01-07 17:15:02  [ main:301 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2021-01-07 17:15:02  [ main:452 ] - [ INFO ]  Submitted application: broadcast_test
+2021-01-07 17:15:02  [ main:522 ] - [ INFO ]  Changing view acls to: liuwenyi,root
+2021-01-07 17:15:02  [ main:523 ] - [ INFO ]  Changing modify acls to: liuwenyi,root
+2021-01-07 17:15:02  [ main:523 ] - [ INFO ]  Changing view acls groups to: 
+2021-01-07 17:15:02  [ main:524 ] - [ INFO ]  Changing modify acls groups to: 
+2021-01-07 17:15:02  [ main:524 ] - [ INFO ]  SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(liuwenyi, root); groups with view permissions: Set(); users  with modify permissions: Set(liuwenyi, root); groups with modify permissions: Set()
+2021-01-07 17:15:02  [ main:868 ] - [ INFO ]  Successfully started service 'sparkDriver' on port 56724.
+2021-01-07 17:15:02  [ main:893 ] - [ INFO ]  Registering MapOutputTracker
+2021-01-07 17:15:03  [ main:916 ] - [ INFO ]  Registering BlockManagerMaster
+2021-01-07 17:15:03  [ main:921 ] - [ INFO ]  Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2021-01-07 17:15:03  [ main:922 ] - [ INFO ]  BlockManagerMasterEndpoint up
+2021-01-07 17:15:03  [ main:963 ] - [ INFO ]  Created local directory at /private/var/folders/y1/26k_xzzj321fz8xhvjvvdd4c0000gn/T/blockmgr-56f4cf5a-bdd2-47c0-a270-a37817feabc8
+2021-01-07 17:15:03  [ main:990 ] - [ INFO ]  MemoryStore started with capacity 2004.6 MB
+2021-01-07 17:15:03  [ main:1008 ] - [ INFO ]  Registering OutputCommitCoordinator
+2021-01-07 17:15:03  [ main:1108 ] - [ INFO ]  Logging initialized @1796ms
+2021-01-07 17:15:03  [ main:1164 ] - [ INFO ]  jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+2021-01-07 17:15:03  [ main:1178 ] - [ INFO ]  Started @1867ms
+2021-01-07 17:15:03  [ main:1194 ] - [ INFO ]  Started ServerConnector@77192705{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2021-01-07 17:15:03  [ main:1194 ] - [ INFO ]  Successfully started service 'SparkUI' on port 4040.
+2021-01-07 17:15:03  [ main:1214 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@26fb628{/jobs,null,AVAILABLE,@Spark}
+2021-01-07 17:15:03  [ main:1215 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@4204541c{/jobs/json,null,AVAILABLE,@Spark}
+2021-01-07 17:15:03  [ main:1215 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@6a62689d{/jobs/job,null,AVAILABLE,@Spark}
+2021-01-07 17:15:03  [ main:1216 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@60fa3495{/jobs/job/json,null,AVAILABLE,@Spark}
+2021-01-07 17:15:03  [ main:1216 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@3e2822{/stages,null,AVAILABLE,@Spark}
+2021-01-07 17:15:03  [ main:1217 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@79e18e38{/stages/json,null,AVAILABLE,@Spark}
+2021-01-07 17:15:03  [ main:1217 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@29a60c27{/stages/stage,null,AVAILABLE,@Spark}
+2021-01-07 17:15:03  [ main:1218 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@1ca25c47{/stages/stage/json,null,AVAILABLE,@Spark}
+2021-01-07 17:15:03  [ main:1219 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@5fcacc0{/stages/pool,null,AVAILABLE,@Spark}
+2021-01-07 17:15:03  [ main:1219 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@533b266e{/stages/pool/json,null,AVAILABLE,@Spark}
+2021-01-07 17:15:03  [ main:1220 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@6d1d4d7{/storage,null,AVAILABLE,@Spark}
+2021-01-07 17:15:03  [ main:1220 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@89ff02e{/storage/json,null,AVAILABLE,@Spark}
+2021-01-07 17:15:03  [ main:1221 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@6865c751{/storage/rdd,null,AVAILABLE,@Spark}
+2021-01-07 17:15:03  [ main:1222 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@62679465{/storage/rdd/json,null,AVAILABLE,@Spark}
+2021-01-07 17:15:03  [ main:1223 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@6a988392{/environment,null,AVAILABLE,@Spark}
+2021-01-07 17:15:03  [ main:1223 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@1d71006f{/environment/json,null,AVAILABLE,@Spark}
+2021-01-07 17:15:03  [ main:1224 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@5b6813df{/executors,null,AVAILABLE,@Spark}
+2021-01-07 17:15:03  [ main:1224 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@5f2606b{/executors/json,null,AVAILABLE,@Spark}
+2021-01-07 17:15:03  [ main:1225 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@2b58f754{/executors/threadDump,null,AVAILABLE,@Spark}
+2021-01-07 17:15:03  [ main:1225 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@3ebff828{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2021-01-07 17:15:03  [ main:1231 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@2552f2cb{/static,null,AVAILABLE,@Spark}
+2021-01-07 17:15:03  [ main:1231 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@495083a0{/,null,AVAILABLE,@Spark}
+2021-01-07 17:15:03  [ main:1232 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@5fd62371{/api,null,AVAILABLE,@Spark}
+2021-01-07 17:15:03  [ main:1232 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@841e575{/jobs/job/kill,null,AVAILABLE,@Spark}
+2021-01-07 17:15:03  [ main:1233 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@27a5328c{/stages/stage/kill,null,AVAILABLE,@Spark}
+2021-01-07 17:15:03  [ main:1235 ] - [ INFO ]  Bound SparkUI to 0.0.0.0, and started at http://192.168.3.166:4040
+2021-01-07 17:15:03  [ main:1308 ] - [ INFO ]  Starting executor ID driver on host localhost
+2021-01-07 17:15:03  [ main:1366 ] - [ INFO ]  Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 56725.
+2021-01-07 17:15:03  [ main:1366 ] - [ INFO ]  Server created on 192.168.3.166:56725
+2021-01-07 17:15:03  [ main:1368 ] - [ INFO ]  Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2021-01-07 17:15:03  [ main:1397 ] - [ INFO ]  Registering BlockManager BlockManagerId(driver, 192.168.3.166, 56725, None)
+2021-01-07 17:15:03  [ dispatcher-event-loop-10:1401 ] - [ INFO ]  Registering block manager 192.168.3.166:56725 with 2004.6 MB RAM, BlockManagerId(driver, 192.168.3.166, 56725, None)
+2021-01-07 17:15:03  [ main:1404 ] - [ INFO ]  Registered BlockManager BlockManagerId(driver, 192.168.3.166, 56725, None)
+2021-01-07 17:15:03  [ main:1405 ] - [ INFO ]  Initialized BlockManager: BlockManagerId(driver, 192.168.3.166, 56725, None)
+2021-01-07 17:15:03  [ main:1571 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@4aeaadc1{/metrics/json,null,AVAILABLE,@Spark}
+2021-01-07 17:15:03  [ main:1632 ] - [ INFO ]  Block broadcast_0 stored as values in memory (estimated size 64.0 B, free 2004.6 MB)
+2021-01-07 17:15:03  [ main:1768 ] - [ INFO ]  Block broadcast_0_piece0 stored as bytes in memory (estimated size 89.0 B, free 2004.6 MB)
+2021-01-07 17:15:03  [ dispatcher-event-loop-12:1770 ] - [ INFO ]  Added broadcast_0_piece0 in memory on 192.168.3.166:56725 (size: 89.0 B, free: 2004.6 MB)
+2021-01-07 17:15:03  [ main:1774 ] - [ INFO ]  Created broadcast 0 from broadcast at BroadcastTest.scala:15
+2021-01-07 17:15:03  [ main:1787 ] - [ INFO ]  Destroying Broadcast(0) (from destroy at BroadcastTest.scala:17)
+2021-01-07 17:15:03  [ dispatcher-event-loop-15:1800 ] - [ INFO ]  Removed broadcast_0_piece0 on 192.168.3.166:56725 in memory (size: 89.0 B, free: 2004.6 MB)
+2021-01-07 17:15:03  [ Thread-1:1803 ] - [ INFO ]  Invoking stop() from shutdown hook
+2021-01-07 17:15:03  [ Thread-1:1812 ] - [ INFO ]  Stopped Spark@77192705{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2021-01-07 17:15:03  [ Thread-1:1813 ] - [ INFO ]  Stopped Spark web UI at http://192.168.3.166:4040
+2021-01-07 17:15:03  [ dispatcher-event-loop-2:1822 ] - [ INFO ]  MapOutputTrackerMasterEndpoint stopped!
+2021-01-07 17:15:03  [ Thread-1:1834 ] - [ INFO ]  MemoryStore cleared
+2021-01-07 17:15:03  [ Thread-1:1834 ] - [ INFO ]  BlockManager stopped
+2021-01-07 17:15:03  [ Thread-1:1835 ] - [ INFO ]  BlockManagerMaster stopped
+2021-01-07 17:15:03  [ dispatcher-event-loop-7:1838 ] - [ INFO ]  OutputCommitCoordinator stopped!
+2021-01-07 17:15:03  [ Thread-1:1844 ] - [ INFO ]  Successfully stopped SparkContext
+2021-01-07 17:15:03  [ Thread-1:1844 ] - [ INFO ]  Shutdown hook called
+2021-01-07 17:15:03  [ Thread-1:1845 ] - [ INFO ]  Deleting directory /private/var/folders/y1/26k_xzzj321fz8xhvjvvdd4c0000gn/T/spark-1fd37366-440a-46f3-80a2-64e82d387188
+2021-01-07 17:57:22  [ main:0 ] - [ WARN ]  Your hostname, liuwenyideMacBook-Pro.local resolves to a loopback address: 127.0.0.1; using 192.168.3.166 instead (on interface en0)
+2021-01-07 17:57:22  [ main:2 ] - [ WARN ]  Set SPARK_LOCAL_IP if you need to bind to another address
+2021-01-07 17:57:22  [ main:61 ] - [ INFO ]  Running Spark version 2.4.4
+2021-01-07 17:57:22  [ main:278 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2021-01-07 17:57:22  [ main:407 ] - [ INFO ]  Submitted application: DataFrameTest
+2021-01-07 17:57:22  [ main:471 ] - [ INFO ]  Changing view acls to: liuwenyi,root
+2021-01-07 17:57:22  [ main:472 ] - [ INFO ]  Changing modify acls to: liuwenyi,root
+2021-01-07 17:57:22  [ main:472 ] - [ INFO ]  Changing view acls groups to: 
+2021-01-07 17:57:22  [ main:472 ] - [ INFO ]  Changing modify acls groups to: 
+2021-01-07 17:57:22  [ main:473 ] - [ INFO ]  SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(liuwenyi, root); groups with view permissions: Set(); users  with modify permissions: Set(liuwenyi, root); groups with modify permissions: Set()
+2021-01-07 17:57:23  [ main:761 ] - [ INFO ]  Successfully started service 'sparkDriver' on port 57189.
+2021-01-07 17:57:23  [ main:782 ] - [ INFO ]  Registering MapOutputTracker
+2021-01-07 17:57:23  [ main:797 ] - [ INFO ]  Registering BlockManagerMaster
+2021-01-07 17:57:23  [ main:799 ] - [ INFO ]  Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2021-01-07 17:57:23  [ main:800 ] - [ INFO ]  BlockManagerMasterEndpoint up
+2021-01-07 17:57:23  [ main:829 ] - [ INFO ]  Created local directory at /private/var/folders/y1/26k_xzzj321fz8xhvjvvdd4c0000gn/T/blockmgr-56b59076-93a7-4efc-a1b5-13a5cfc18d89
+2021-01-07 17:57:23  [ main:843 ] - [ INFO ]  MemoryStore started with capacity 2004.6 MB
+2021-01-07 17:57:23  [ main:854 ] - [ INFO ]  Registering OutputCommitCoordinator
+2021-01-07 17:57:23  [ main:907 ] - [ INFO ]  Logging initialized @1600ms
+2021-01-07 17:57:23  [ main:948 ] - [ INFO ]  jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+2021-01-07 17:57:23  [ main:959 ] - [ INFO ]  Started @1653ms
+2021-01-07 17:57:23  [ main:972 ] - [ INFO ]  Started ServerConnector@5b970f7{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2021-01-07 17:57:23  [ main:972 ] - [ INFO ]  Successfully started service 'SparkUI' on port 4040.
+2021-01-07 17:57:23  [ main:990 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@2d10e0b1{/jobs,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:991 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@89ff02e{/jobs/json,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:992 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@6865c751{/jobs/job,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:993 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@6a988392{/jobs/job/json,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:993 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@1d71006f{/stages,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:994 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@5b6813df{/stages/json,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:994 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@5f2606b{/stages/stage,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:995 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@2552f2cb{/stages/stage/json,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:996 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@33352f32{/stages/pool,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:996 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@5f3b9c57{/stages/pool/json,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:997 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@1e044120{/storage,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:998 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@2cf23c81{/storage/json,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:998 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@3624da92{/storage/rdd,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:999 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@35fe2125{/storage/rdd/json,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:999 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@94f6bfb{/environment,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:1000 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@34645867{/environment/json,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:1001 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@2484f433{/executors,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:1001 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@60b71e8f{/executors/json,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:1002 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@1255b1d1{/executors/threadDump,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:1002 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@464649c{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:1007 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@7c22d4f{/static,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:1007 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@6f80fafe{/,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:1008 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@3af17be2{/api,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:1009 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@6e521c1e{/jobs/job/kill,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:1009 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@224b4d61{/stages/stage/kill,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:1010 ] - [ INFO ]  Bound SparkUI to 0.0.0.0, and started at http://192.168.3.166:4040
+2021-01-07 17:57:23  [ main:1070 ] - [ INFO ]  Starting executor ID driver on host localhost
+2021-01-07 17:57:23  [ main:1132 ] - [ INFO ]  Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 57190.
+2021-01-07 17:57:23  [ main:1133 ] - [ INFO ]  Server created on 192.168.3.166:57190
+2021-01-07 17:57:23  [ main:1134 ] - [ INFO ]  Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2021-01-07 17:57:23  [ main:1152 ] - [ INFO ]  Registering BlockManager BlockManagerId(driver, 192.168.3.166, 57190, None)
+2021-01-07 17:57:23  [ dispatcher-event-loop-10:1154 ] - [ INFO ]  Registering block manager 192.168.3.166:57190 with 2004.6 MB RAM, BlockManagerId(driver, 192.168.3.166, 57190, None)
+2021-01-07 17:57:23  [ main:1156 ] - [ INFO ]  Registered BlockManager BlockManagerId(driver, 192.168.3.166, 57190, None)
+2021-01-07 17:57:23  [ main:1156 ] - [ INFO ]  Initialized BlockManager: BlockManagerId(driver, 192.168.3.166, 57190, None)
+2021-01-07 17:57:23  [ main:1291 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@64040287{/metrics/json,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:1410 ] - [ INFO ]  Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/Users/liuwenyi/IdeaProjects/satan/spark-warehouse').
+2021-01-07 17:57:23  [ main:1412 ] - [ INFO ]  Warehouse path is 'file:/Users/liuwenyi/IdeaProjects/satan/spark-warehouse'.
+2021-01-07 17:57:23  [ main:1424 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@6fe46b62{/SQL,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:1424 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@591fd34d{/SQL/json,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:1425 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@17ca8b92{/SQL/execution,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:1425 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@5491f68b{/SQL/execution/json,null,AVAILABLE,@Spark}
+2021-01-07 17:57:23  [ main:1427 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@3b0ca5e1{/static/sql,null,AVAILABLE,@Spark}
+2021-01-07 17:57:24  [ main:1942 ] - [ INFO ]  Registered StateStoreCoordinator endpoint
+2021-01-07 17:57:25  [ main:3558 ] - [ INFO ]  Pruning directories with: 
+2021-01-07 17:57:25  [ main:3561 ] - [ INFO ]  Post-Scan Filters: (length(trim(value#0, None)) > 0)
+2021-01-07 17:57:25  [ main:3564 ] - [ INFO ]  Output Data Schema: struct<value: string>
+2021-01-07 17:57:25  [ main:3573 ] - [ INFO ]  Pushed Filters: 
+2021-01-07 17:57:26  [ main:3909 ] - [ INFO ]  Code generated in 168.085054 ms
+2021-01-07 17:57:26  [ main:4207 ] - [ INFO ]  Code generated in 16.500031 ms
+2021-01-07 17:57:26  [ main:4268 ] - [ INFO ]  Block broadcast_0 stored as values in memory (estimated size 220.0 KB, free 2004.4 MB)
+2021-01-07 17:57:26  [ main:4397 ] - [ INFO ]  Block broadcast_0_piece0 stored as bytes in memory (estimated size 20.6 KB, free 2004.4 MB)
+2021-01-07 17:57:26  [ dispatcher-event-loop-13:4399 ] - [ INFO ]  Added broadcast_0_piece0 in memory on 192.168.3.166:57190 (size: 20.6 KB, free: 2004.6 MB)
+2021-01-07 17:57:26  [ main:4400 ] - [ INFO ]  Created broadcast 0 from csv at DataFrameTest.scala:16
+2021-01-07 17:57:26  [ main:4404 ] - [ INFO ]  Planning scan with bin packing, max size: 117498005 bytes, open cost is considered as scanning 4194304 bytes.
+2021-01-07 17:57:26  [ main:4505 ] - [ INFO ]  Starting job: csv at DataFrameTest.scala:16
+2021-01-07 17:57:26  [ dag-scheduler-event-loop:4527 ] - [ INFO ]  Got job 0 (csv at DataFrameTest.scala:16) with 1 output partitions
+2021-01-07 17:57:26  [ dag-scheduler-event-loop:4527 ] - [ INFO ]  Final stage: ResultStage 0 (csv at DataFrameTest.scala:16)
+2021-01-07 17:57:26  [ dag-scheduler-event-loop:4527 ] - [ INFO ]  Parents of final stage: List()
+2021-01-07 17:57:26  [ dag-scheduler-event-loop:4529 ] - [ INFO ]  Missing parents: List()
+2021-01-07 17:57:26  [ dag-scheduler-event-loop:4534 ] - [ INFO ]  Submitting ResultStage 0 (MapPartitionsRDD[3] at csv at DataFrameTest.scala:16), which has no missing parents
+2021-01-07 17:57:26  [ dag-scheduler-event-loop:4585 ] - [ INFO ]  Block broadcast_1 stored as values in memory (estimated size 8.8 KB, free 2004.4 MB)
+2021-01-07 17:57:26  [ dag-scheduler-event-loop:4588 ] - [ INFO ]  Block broadcast_1_piece0 stored as bytes in memory (estimated size 4.5 KB, free 2004.4 MB)
+2021-01-07 17:57:26  [ dispatcher-event-loop-14:4589 ] - [ INFO ]  Added broadcast_1_piece0 in memory on 192.168.3.166:57190 (size: 4.5 KB, free: 2004.6 MB)
+2021-01-07 17:57:26  [ dag-scheduler-event-loop:4590 ] - [ INFO ]  Created broadcast 1 from broadcast at DAGScheduler.scala:1161
+2021-01-07 17:57:27  [ dag-scheduler-event-loop:4614 ] - [ INFO ]  Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at csv at DataFrameTest.scala:16) (first 15 tasks are for partitions Vector(0))
+2021-01-07 17:57:27  [ dag-scheduler-event-loop:4615 ] - [ INFO ]  Adding task set 0.0 with 1 tasks
+2021-01-07 17:57:27  [ dispatcher-event-loop-15:4656 ] - [ INFO ]  Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 8301 bytes)
+2021-01-07 17:57:27  [ Executor task launch worker for task 0:4667 ] - [ INFO ]  Running task 0.0 in stage 0.0 (TID 0)
+2021-01-07 17:57:27  [ Executor task launch worker for task 0:4719 ] - [ INFO ]  Reading File path: file:///Users/liuwenyi/Downloads/八斗19期/badou_project_data/project2/user_log.csv, range: 0-117498005, partition values: [empty row]
+2021-01-07 17:57:27  [ Executor task launch worker for task 0:4731 ] - [ INFO ]  Code generated in 7.792205 ms
+2021-01-07 17:57:27  [ Executor task launch worker for task 0:4773 ] - [ INFO ]  Finished task 0.0 in stage 0.0 (TID 0). 1361 bytes result sent to driver
+2021-01-07 17:57:27  [ task-result-getter-0:4780 ] - [ INFO ]  Finished task 0.0 in stage 0.0 (TID 0) in 135 ms on localhost (executor driver) (1/1)
+2021-01-07 17:57:27  [ task-result-getter-0:4784 ] - [ INFO ]  Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2021-01-07 17:57:27  [ dag-scheduler-event-loop:4789 ] - [ INFO ]  ResultStage 0 (csv at DataFrameTest.scala:16) finished in 0.237 s
+2021-01-07 17:57:27  [ main:4793 ] - [ INFO ]  Job 0 finished: csv at DataFrameTest.scala:16, took 0.287659 s
+2021-01-07 17:57:27  [ main:4845 ] - [ INFO ]  Pruning directories with: 
+2021-01-07 17:57:27  [ main:4845 ] - [ INFO ]  Post-Scan Filters: 
+2021-01-07 17:57:27  [ main:4846 ] - [ INFO ]  Output Data Schema: struct<value: string>
+2021-01-07 17:57:27  [ main:4846 ] - [ INFO ]  Pushed Filters: 
+2021-01-07 17:57:27  [ main:4855 ] - [ INFO ]  Code generated in 5.936807 ms
+2021-01-07 17:57:27  [ main:4867 ] - [ INFO ]  Block broadcast_2 stored as values in memory (estimated size 220.0 KB, free 2004.1 MB)
+2021-01-07 17:57:27  [ main:4879 ] - [ INFO ]  Block broadcast_2_piece0 stored as bytes in memory (estimated size 20.6 KB, free 2004.1 MB)
+2021-01-07 17:57:27  [ dispatcher-event-loop-2:4879 ] - [ INFO ]  Added broadcast_2_piece0 in memory on 192.168.3.166:57190 (size: 20.6 KB, free: 2004.6 MB)
+2021-01-07 17:57:27  [ main:4880 ] - [ INFO ]  Created broadcast 2 from csv at DataFrameTest.scala:16
+2021-01-07 17:57:27  [ main:4880 ] - [ INFO ]  Planning scan with bin packing, max size: 117498005 bytes, open cost is considered as scanning 4194304 bytes.
+2021-01-07 17:57:27  [ main:4933 ] - [ INFO ]  Pruning directories with: 
+2021-01-07 17:57:27  [ main:4934 ] - [ INFO ]  Post-Scan Filters: 
+2021-01-07 17:57:27  [ main:4934 ] - [ INFO ]  Output Data Schema: struct<_c0: string, _c1: string, _c2: string, _c3: string, _c4: string ... 13 more fields>
+2021-01-07 17:57:27  [ main:4935 ] - [ INFO ]  Pushed Filters: 
+2021-01-07 17:57:27  [ main:4988 ] - [ INFO ]  Code generated in 26.873478 ms
+2021-01-07 17:57:27  [ main:5006 ] - [ INFO ]  Block broadcast_3 stored as values in memory (estimated size 220.0 KB, free 2003.9 MB)
+2021-01-07 17:57:27  [ main:5022 ] - [ INFO ]  Block broadcast_3_piece0 stored as bytes in memory (estimated size 20.6 KB, free 2003.9 MB)
+2021-01-07 17:57:27  [ dispatcher-event-loop-3:5023 ] - [ INFO ]  Added broadcast_3_piece0 in memory on 192.168.3.166:57190 (size: 20.6 KB, free: 2004.5 MB)
+2021-01-07 17:57:27  [ main:5024 ] - [ INFO ]  Created broadcast 3 from show at DataFrameTest.scala:17
+2021-01-07 17:57:27  [ main:5026 ] - [ INFO ]  Planning scan with bin packing, max size: 117498005 bytes, open cost is considered as scanning 4194304 bytes.
+2021-01-07 17:57:27  [ main:5041 ] - [ INFO ]  Starting job: show at DataFrameTest.scala:17
+2021-01-07 17:57:27  [ dag-scheduler-event-loop:5042 ] - [ INFO ]  Got job 1 (show at DataFrameTest.scala:17) with 1 output partitions
+2021-01-07 17:57:27  [ dag-scheduler-event-loop:5042 ] - [ INFO ]  Final stage: ResultStage 1 (show at DataFrameTest.scala:17)
+2021-01-07 17:57:27  [ dag-scheduler-event-loop:5042 ] - [ INFO ]  Parents of final stage: List()
+2021-01-07 17:57:27  [ dag-scheduler-event-loop:5043 ] - [ INFO ]  Missing parents: List()
+2021-01-07 17:57:27  [ dag-scheduler-event-loop:5043 ] - [ INFO ]  Submitting ResultStage 1 (MapPartitionsRDD[12] at show at DataFrameTest.scala:17), which has no missing parents
+2021-01-07 17:57:27  [ dag-scheduler-event-loop:5050 ] - [ INFO ]  Block broadcast_4 stored as values in memory (estimated size 11.4 KB, free 2003.9 MB)
+2021-01-07 17:57:27  [ dag-scheduler-event-loop:5051 ] - [ INFO ]  Block broadcast_4_piece0 stored as bytes in memory (estimated size 6.1 KB, free 2003.9 MB)
+2021-01-07 17:57:27  [ dispatcher-event-loop-4:5052 ] - [ INFO ]  Added broadcast_4_piece0 in memory on 192.168.3.166:57190 (size: 6.1 KB, free: 2004.5 MB)
+2021-01-07 17:57:27  [ dag-scheduler-event-loop:5052 ] - [ INFO ]  Created broadcast 4 from broadcast at DAGScheduler.scala:1161
+2021-01-07 17:57:27  [ dag-scheduler-event-loop:5053 ] - [ INFO ]  Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[12] at show at DataFrameTest.scala:17) (first 15 tasks are for partitions Vector(0))
+2021-01-07 17:57:27  [ dag-scheduler-event-loop:5053 ] - [ INFO ]  Adding task set 1.0 with 1 tasks
+2021-01-07 17:57:27  [ dispatcher-event-loop-5:5054 ] - [ INFO ]  Starting task 0.0 in stage 1.0 (TID 1, localhost, executor driver, partition 0, PROCESS_LOCAL, 8301 bytes)
+2021-01-07 17:57:27  [ Executor task launch worker for task 1:5054 ] - [ INFO ]  Running task 0.0 in stage 1.0 (TID 1)
+2021-01-07 17:57:27  [ Executor task launch worker for task 1:5061 ] - [ INFO ]  Reading File path: file:///Users/liuwenyi/Downloads/八斗19期/badou_project_data/project2/user_log.csv, range: 0-117498005, partition values: [empty row]
+2021-01-07 17:57:27  [ Executor task launch worker for task 1:5081 ] - [ INFO ]  Code generated in 17.293511 ms
+2021-01-07 17:57:27  [ Executor task launch worker for task 1:5109 ] - [ INFO ]  Finished task 0.0 in stage 1.0 (TID 1). 7642 bytes result sent to driver
+2021-01-07 17:57:27  [ task-result-getter-1:5110 ] - [ INFO ]  Finished task 0.0 in stage 1.0 (TID 1) in 57 ms on localhost (executor driver) (1/1)
+2021-01-07 17:57:27  [ task-result-getter-1:5110 ] - [ INFO ]  Removed TaskSet 1.0, whose tasks have all completed, from pool 
+2021-01-07 17:57:27  [ dag-scheduler-event-loop:5110 ] - [ INFO ]  ResultStage 1 (show at DataFrameTest.scala:17) finished in 0.067 s
+2021-01-07 17:57:27  [ main:5111 ] - [ INFO ]  Job 1 finished: show at DataFrameTest.scala:17, took 0.069107 s
+2021-01-07 17:57:27  [ Thread-1:5128 ] - [ INFO ]  Invoking stop() from shutdown hook
+2021-01-07 17:57:27  [ Thread-1:5136 ] - [ INFO ]  Stopped Spark@5b970f7{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2021-01-07 17:57:27  [ Thread-1:5138 ] - [ INFO ]  Stopped Spark web UI at http://192.168.3.166:4040
+2021-01-07 17:57:27  [ dispatcher-event-loop-10:5144 ] - [ INFO ]  MapOutputTrackerMasterEndpoint stopped!
+2021-01-07 17:57:27  [ Thread-1:5155 ] - [ INFO ]  MemoryStore cleared
+2021-01-07 17:57:27  [ Thread-1:5155 ] - [ INFO ]  BlockManager stopped
+2021-01-07 17:57:27  [ Thread-1:5158 ] - [ INFO ]  BlockManagerMaster stopped
+2021-01-07 17:57:27  [ dispatcher-event-loop-15:5159 ] - [ INFO ]  OutputCommitCoordinator stopped!
+2021-01-07 17:57:27  [ Thread-1:5166 ] - [ INFO ]  Successfully stopped SparkContext
+2021-01-07 17:57:27  [ Thread-1:5166 ] - [ INFO ]  Shutdown hook called
+2021-01-07 17:57:27  [ Thread-1:5167 ] - [ INFO ]  Deleting directory /private/var/folders/y1/26k_xzzj321fz8xhvjvvdd4c0000gn/T/spark-bfc21ceb-f217-44cc-90e1-2fc0d2ff7f43
