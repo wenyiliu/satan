@@ -16,7 +16,7 @@ object UserRecallMain {
     if (args.length == 1) {
       recallUserCF = new RecallUserCF(spark, true)
     } else if (args.length >= 2) {
-      recallUserCF = new RecallUserCF(spark, true, args(2))
+      recallUserCF = new RecallUserCF(spark, true, args(1))
     } else {
       recallUserCF = new RecallUserCF(spark)
     }
