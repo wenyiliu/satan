@@ -1,9 +1,9 @@
 package com.recommand.study.recall
 
 import breeze.numerics.{pow, sqrt}
-import com.recommand.study.commonenum.UserCFEnum
+import com.recommand.study.commonenum.RecallCFEnum
 import com.recommand.study.data.HiveDataLoader
-import com.recommand.study.util.{CommonUtils, FunctionUDFUtils}
+import com.recommand.study.util.{CommonUtils, FunctionUDFUtils, RecallCFUtils}
 import org.apache.spark.sql.functions.{col, explode}
 import org.apache.spark.sql.{DataFrame, SparkSession}
 
@@ -45,7 +45,7 @@ class RecallUserCF(spark: SparkSession) {
   }
 
   private def getUserItemRecall: DataFrame = {
-    val userMusicFavoriteRate = getUserMusicFavoriteRate
+    val userMusicFavoriteRate = RecallCFUtils.getUserMusicFavoriteRate(spark)
     userMusicFavoriteRate.cache()
 
     val userRateMolecularDF = getUserRateMolecularDF(userMusicFavoriteRate)
@@ -56,7 +56,7 @@ class RecallUserCF(spark: SparkSession) {
       .map(x => (x(0).toString, x(2).toString))
       .groupByKey()
       .mapValues(iter => sqrt(iter.map(rate => pow(rate.toDouble, 2)).sum))
-      .toDF(UserCFEnum.userId.toString, UserCFEnum.denominator.toString)
+      .toDF(RecallCFEnum.userId.toString, RecallCFEnum.denominator.toString)
 
     // copy 分母 df
     val userRateDenominatorCopy = userRateDenominator.selectExpr("userId as userSimId", "denominator as denominatorSim")
@@ -71,12 +71,12 @@ class RecallUserCF(spark: SparkSession) {
       .map(x => (x(0).toString, x(1).toString + "_" + x(2).toString))
       .groupByKey()
       .mapValues(x => x.toArray)
-      .toDF(UserCFEnum.userId.toString, "musicArr")
+      .toDF(RecallCFEnum.userId.toString, "musicArr")
 
     val userMusicArrCopy = CommonUtils.copyDF(userMusicArr)
     userMusicArrCopy.show(100)
     // 目标用户，目标用户听过的音乐列表，相似用户，相似用户听过的音乐列表
-    val user2UserMusicArrDF = dfSimDf.join(userMusicArr, dfSimDf("userTargetId") === userMusicArr(UserCFEnum.userId.toString))
+    val user2UserMusicArrDF = dfSimDf.join(userMusicArr, dfSimDf("userTargetId") === userMusicArr(RecallCFEnum.userId.toString))
       .join(userMusicArrCopy, dfSimDf("userSimId") === userMusicArrCopy("userIdCopy"))
       .selectExpr("userTargetId", "userSimId", "musicArr as musicTargetArr", "musicArrCopy as musicSimArr", "sim")
       .withColumn("unListen", FunctionUDFUtils.filterUnListenUdf(col("musicTargetArr"), col("musicSimArr")))
@@ -88,6 +88,7 @@ class RecallUserCF(spark: SparkSession) {
       .selectExpr("userId as user_id ", "split(musicPro,'_')[0] as music_id",
         "split(musicPro,'_')[1] as score")
     //    itemScoreDF.show(10)
+    userMusicFavoriteRate.unpersist()
     itemScoreDF
   }
 
@@ -98,76 +99,45 @@ class RecallUserCF(spark: SparkSession) {
       val userProfileDF = HiveDataLoader.getUserProfile(spark)
 
       // 用户对音乐的喜爱程度 df，与用户详细信息做关联
-      val userMusicFavoriteRateProfile = userMusicFavoriteRate.join(userProfileDF, UserCFEnum.userId.toString)
-        .selectExpr(UserCFEnum.userId.toString, UserCFEnum.musicId.toString, UserCFEnum.gender.toString,
-          UserCFEnum.age.toString, UserCFEnum.salary.toString, UserCFEnum.favoriteRate.toString)
+      val userMusicFavoriteRateProfile = userMusicFavoriteRate.join(userProfileDF, RecallCFEnum.userId.toString)
+        .selectExpr(RecallCFEnum.userId.toString, RecallCFEnum.musicId.toString, RecallCFEnum.gender.toString,
+          RecallCFEnum.age.toString, RecallCFEnum.salary.toString, RecallCFEnum.favoriteRate.toString)
 
       // copy 一个带有用户详细信息的 df，后面做关联
       val userMusicFavoriteRateProfileCopy = CommonUtils.copyDF(userMusicFavoriteRateProfile)
 
       // 关联需要的 on 条件
-      val onColumnArr = Array(UserCFEnum.musicId.toString, UserCFEnum.gender.toString, UserCFEnum.age.toString,
-        UserCFEnum.salary.toString)
+      val onColumnArr = Array(RecallCFEnum.musicId.toString, RecallCFEnum.gender.toString, RecallCFEnum.age.toString,
+        RecallCFEnum.salary.toString)
 
       // 调用工具类做关联，降低处理的数据量
       tmpMusicRelatedDF = CommonUtils.join(userMusicFavoriteRateProfile, userMusicFavoriteRateProfileCopy, onColumnArr)
-        .filter(getFilterCondition(UserCFEnum.userId.toString))
+        .filter(RecallCFUtils.getFilterCondition(RecallCFEnum.userId.toString))
     } else {
       // 不使用聚类，copy 一个用户喜爱程度
       val userMusicFavoriteRateCopy = CommonUtils.copyDF(userMusicFavoriteRate)
-      tmpMusicRelatedDF = CommonUtils.join(userMusicFavoriteRate, userMusicFavoriteRateCopy, Array(UserCFEnum.musicId.toString))
-        .filter(getFilterCondition(UserCFEnum.userId.toString))
+      tmpMusicRelatedDF = CommonUtils.join(userMusicFavoriteRate, userMusicFavoriteRateCopy, Array(RecallCFEnum.musicId.toString))
+        .filter(RecallCFUtils.getFilterCondition(RecallCFEnum.userId.toString))
     }
     //    tmpMusicRelatedDF.show(100)
     // 计算 key = userID + userIdCopy + musicId ,value  = favoriteRate * favoriteRateCopy
     // 就是计算两个不同的用户喜好同一首音乐的「喜爱程度」的乘积
-    val musicRelatedDF = tmpMusicRelatedDF.selectExpr(UserCFEnum.userId.toString, UserCFEnum.favoriteRate.toString,
-      UserCFEnum.musicId.toString, CommonUtils.concatCopy(UserCFEnum.userId.toString), CommonUtils.concatCopy(UserCFEnum.favoriteRate.toString))
-      .withColumn(UserCFEnum.favoriteRateMolecular.toString, FunctionUDFUtils.productUdf(col(UserCFEnum.favoriteRate.toString), col(CommonUtils.concatCopy(UserCFEnum.favoriteRate.toString))))
+    val musicRelatedDF = tmpMusicRelatedDF.selectExpr(RecallCFEnum.userId.toString, RecallCFEnum.favoriteRate.toString,
+      RecallCFEnum.musicId.toString, CommonUtils.concatCopy(RecallCFEnum.userId.toString), CommonUtils.concatCopy(RecallCFEnum.favoriteRate.toString))
+      .withColumn(RecallCFEnum.favoriteRateMolecular.toString, FunctionUDFUtils.productUdf(col(RecallCFEnum.favoriteRate.toString), col(CommonUtils.concatCopy(RecallCFEnum.favoriteRate.toString))))
 
     // 计算两个不同的用户喜好音乐的「喜爱程度」的乘积 的和
     // 这个结果相当于计算相似度公式中的 分子
     val tmp = musicRelatedDF
-      .groupBy(UserCFEnum.userId.toString, CommonUtils.concatCopy(UserCFEnum.userId.toString))
+      .groupBy(RecallCFEnum.userId.toString, CommonUtils.concatCopy(RecallCFEnum.userId.toString))
       .agg("favoriteRateMolecular" -> "sum")
-      .withColumnRenamed("sum(favoriteRateMolecular)", UserCFEnum.molecular.toString)
+      .withColumnRenamed("sum(favoriteRateMolecular)", RecallCFEnum.molecular.toString)
     tmp
-  }
-
-  private def getUserMusicFavoriteRate: DataFrame = {
-    // 用户收听音乐详情
-    val userListenDetailDS = HiveDataLoader.getUserListenData(spark)
-
-    // 用户每首歌听的时长
-    val userMusicListenSum = userListenDetailDS.rdd
-      .map(userListenDetail => (userListenDetail.userId + "_" + userListenDetail.musicId, userListenDetail))
-      .groupByKey()
-      .mapValues(iter => iter.map(userListen => userListen.remaintime.toDouble).sum)
-      .map(value => {
-        val valuesArr = value._1.split("_")
-        (valuesArr(0), valuesArr(1), value._2)
-      })
-      .toDF(UserCFEnum.userId.toString, UserCFEnum.musicId.toString, "lesionMusicTimeSum")
-
-    // 用户听歌总时长
-    val userListenSum = userListenDetailDS.rdd
-      .map(userListenDetail => (userListenDetail.userId, userListenDetail))
-      .groupByKey()
-      .mapValues(iter => iter.map(userListen => userListen.remaintime.toDouble).sum)
-      .toDF(UserCFEnum.userId.toString, "lesionTimeSum")
-
-    // 用户对每首歌的喜爱程度，【某首歌的听歌时长/用户听歌总时长】
-    userMusicListenSum.join(userListenSum, UserCFEnum.userId.toString)
-      .selectExpr(UserCFEnum.userId.toString, UserCFEnum.musicId.toString, "lesionMusicTimeSum/lesionTimeSum as favoriteRate")
   }
 
   private def saveDataFrame2Hive(df: DataFrame, tableName: String): Unit = {
     val tmpView = s"tmp_user_recall_view"
     df.createOrReplaceTempView(tmpView)
     spark.sql(s"insert into $tableName partition(date='${LocalDate.now().toString}') select user_id,music_id,score from $tmpView")
-  }
-
-  private def getFilterCondition(column: String): String = {
-    s"$column <> ${CommonUtils.concatCopy(column)}"
   }
 }

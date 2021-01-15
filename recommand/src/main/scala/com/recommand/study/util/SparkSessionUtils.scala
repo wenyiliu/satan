@@ -10,7 +10,7 @@ object SparkSessionUtils {
 
   def getHiveSession(jobName: String, db: String): SparkSession = {
     val spark = SparkSession.builder()
-      .master("local[*]")
+//      .master("local[*]")
       .appName(jobName)
       .enableHiveSupport()
       .getOrCreate()
@@ -20,4 +20,9 @@ object SparkSessionUtils {
     spark
   }
 
+  def getDefaultSession: SparkSession = {
+    SparkSession.builder().master("local[*]")
+      .appName("default")
+      .getOrCreate()
+  }
 }

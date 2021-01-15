@@ -11,7 +11,7 @@ import org.apache.log4j.{Level, Logger}
 object UserRecallMain {
   def main(args: Array[String]): Unit = {
     val spark = SparkSessionUtils.getHiveSession("user_recall", "hive_test")
-    Logger.getLogger("org").setLevel(Level.ERROR)
+    Logger.getLogger("UserRecallMain").setLevel(Level.ERROR)
     var recallUserCF: RecallUserCF = null
     if (args.length == 1) {
       recallUserCF = new RecallUserCF(spark, true)
