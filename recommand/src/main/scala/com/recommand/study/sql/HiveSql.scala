@@ -27,7 +27,7 @@ object HiveSql {
   /**
    * 查询 listen 所有数据
    */
-  val get_all_user_listen_data = "select * from user_listen limit 10000"
+  val get_all_user_listen_data = "select * from user_listen "
 
   /**
    * 获取所有用户详情
@@ -81,9 +81,7 @@ object HiveSql {
 
   val music_all_sql = "select distinct musicId from user_music_favoriteRate_table"
 
-  def save_music_recall_table_sql(tableName: String): String = s"insert into $tableName partition(date='${LocalDate.now().toString}') " +
-    s"select user_id," +
-    s"       music_id," +
-    s"       score " +
-    s"from music_recall_tmp_table"
+  def save_recall_table_sql(tableName: String, tmpTableName: String): String = s"insert into $tableName partition(date='${LocalDate.now().toString}') " +
+    s"select * " +
+    s"from $tmpTableName"
 }

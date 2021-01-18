@@ -17,3 +17,13 @@ score String
 PARTITIONED BY (`date` string)
 row format delimited fields terminated by ','
 stored as ORC;
+
+-- 创建 als_recall 分区表
+CREATE TABLE if not exists als_recall (
+user_id string,
+music_id string,
+score String
+)
+PARTITIONED BY (`date` string)
+row format delimited fields terminated by ','
+stored as ORC;

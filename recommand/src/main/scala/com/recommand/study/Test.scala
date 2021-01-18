@@ -1,5 +1,9 @@
 package com.recommand.study
 
+import com.recommand.study.bean.ALSParam
+import com.recommand.study.recall.RecallALS
+import com.recommand.study.util.SparkSessionUtils
+
 
 /**
  * @author liuwenyi
@@ -7,25 +11,19 @@ package com.recommand.study
  */
 object Test {
   def main(args: Array[String]): Unit = {
-    //    val spark = SparkSessionUtils.getDefaultSession
-    //    import spark.implicits._
-    //    val data = spark.sparkContext.parallelize(Array("1_a_5", "2_b_4", "1_c_4", "1_b_4", "2_a_4")).map(x => {
-    //      val values = x.split("_")
-    //      (values(0), values(1), values(2))
-    //    }).toDF("id", "name", "score")
-    //    val dataCopy = CommonUtils.copyDF(data)
-    //    dataCopy.show()
-    //    dataCopy.join(data, dataCopy("nameCopy") === data("name"))
-    //      .filter("id <> idCopy")
-    //      .selectExpr("id", "idCopy", "score * scoreCopy as scoreSum")
-    //      .groupBy("id", "idCopy")
-    //      .agg("scoreSum" -> "sum")
-    //      .withColumnRenamed("sum(scoreSum)", "totalScore")
-    //      .show()
-    val a = Seq(1, 2, 3)
-    val b = Seq(1, 3)
-
-    println(a diff  b)
+    val spark = SparkSessionUtils.getHiveSession("als", "hive_test")
+    val als = new RecallALS(spark, ALSParam(10, 0.01, 8, "uid", "iid", "rating"), "als_recall")
+    als.aLSResult()
   }
 
+  def test(): Unit = {
+    val spark = SparkSessionUtils.getDefaultSession
+    val arr = Array("a_1", "a_2", "b_1", "c_3")
+
+    spark.createDataFrame(arr.map(x => {
+      val xx = x.split("_")
+      (xx(0), xx(1))
+    })).toDF("name", "value").groupBy("name").count().show()
+
+  }
 }

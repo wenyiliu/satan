@@ -1,0 +1,80 @@
+2021-01-08 18:32:00  [ main:0 ] - [ WARN ]  Your hostname, liuwenyideMacBook-Pro.local resolves to a loopback address: 127.0.0.1; using 192.168.3.166 instead (on interface en0)
+2021-01-08 18:32:00  [ main:3 ] - [ WARN ]  Set SPARK_LOCAL_IP if you need to bind to another address
+2021-01-08 18:32:00  [ main:47 ] - [ INFO ]  Running Spark version 2.4.4
+2021-01-08 18:32:00  [ main:341 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2021-01-08 18:32:01  [ main:488 ] - [ INFO ]  Submitted application: DataFrameTest
+2021-01-08 18:32:01  [ main:555 ] - [ INFO ]  Changing view acls to: liuwenyi,root
+2021-01-08 18:32:01  [ main:555 ] - [ INFO ]  Changing modify acls to: liuwenyi,root
+2021-01-08 18:32:01  [ main:556 ] - [ INFO ]  Changing view acls groups to: 
+2021-01-08 18:32:01  [ main:556 ] - [ INFO ]  Changing modify acls groups to: 
+2021-01-08 18:32:01  [ main:556 ] - [ INFO ]  SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(liuwenyi, root); groups with view permissions: Set(); users  with modify permissions: Set(liuwenyi, root); groups with modify permissions: Set()
+2021-01-08 18:32:01  [ main:892 ] - [ INFO ]  Successfully started service 'sparkDriver' on port 51068.
+2021-01-08 18:32:01  [ main:925 ] - [ INFO ]  Registering MapOutputTracker
+2021-01-08 18:32:01  [ main:956 ] - [ INFO ]  Registering BlockManagerMaster
+2021-01-08 18:32:01  [ main:959 ] - [ INFO ]  Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2021-01-08 18:32:01  [ main:960 ] - [ INFO ]  BlockManagerMasterEndpoint up
+2021-01-08 18:32:01  [ main:994 ] - [ INFO ]  Created local directory at /private/var/folders/y1/26k_xzzj321fz8xhvjvvdd4c0000gn/T/blockmgr-9e357814-c5cd-4063-ba9b-920a9e4cef6d
+2021-01-08 18:32:01  [ main:1013 ] - [ INFO ]  MemoryStore started with capacity 2004.6 MB
+2021-01-08 18:32:01  [ main:1027 ] - [ INFO ]  Registering OutputCommitCoordinator
+2021-01-08 18:32:01  [ main:1105 ] - [ INFO ]  Logging initialized @1658ms
+2021-01-08 18:32:01  [ main:1156 ] - [ INFO ]  jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+2021-01-08 18:32:01  [ main:1169 ] - [ INFO ]  Started @1722ms
+2021-01-08 18:32:01  [ main:1185 ] - [ INFO ]  Started ServerConnector@756cf158{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2021-01-08 18:32:01  [ main:1186 ] - [ INFO ]  Successfully started service 'SparkUI' on port 4040.
+2021-01-08 18:32:01  [ main:1205 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@2ce86164{/jobs,null,AVAILABLE,@Spark}
+2021-01-08 18:32:01  [ main:1206 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@5b6813df{/jobs/json,null,AVAILABLE,@Spark}
+2021-01-08 18:32:01  [ main:1207 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@5f2606b{/jobs/job,null,AVAILABLE,@Spark}
+2021-01-08 18:32:01  [ main:1208 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@3ebff828{/jobs/job/json,null,AVAILABLE,@Spark}
+2021-01-08 18:32:01  [ main:1208 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@2552f2cb{/stages,null,AVAILABLE,@Spark}
+2021-01-08 18:32:01  [ main:1208 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@33352f32{/stages/json,null,AVAILABLE,@Spark}
+2021-01-08 18:32:01  [ main:1209 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@5f3b9c57{/stages/stage,null,AVAILABLE,@Spark}
+2021-01-08 18:32:01  [ main:1210 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@3624da92{/stages/stage/json,null,AVAILABLE,@Spark}
+2021-01-08 18:32:01  [ main:1210 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@35fe2125{/stages/pool,null,AVAILABLE,@Spark}
+2021-01-08 18:32:01  [ main:1211 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@94f6bfb{/stages/pool/json,null,AVAILABLE,@Spark}
+2021-01-08 18:32:01  [ main:1211 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@34645867{/storage,null,AVAILABLE,@Spark}
+2021-01-08 18:32:01  [ main:1212 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@2484f433{/storage/json,null,AVAILABLE,@Spark}
+2021-01-08 18:32:01  [ main:1212 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@60b71e8f{/storage/rdd,null,AVAILABLE,@Spark}
+2021-01-08 18:32:01  [ main:1212 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@1255b1d1{/storage/rdd/json,null,AVAILABLE,@Spark}
+2021-01-08 18:32:01  [ main:1213 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@464649c{/environment,null,AVAILABLE,@Spark}
+2021-01-08 18:32:01  [ main:1213 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@7c22d4f{/environment/json,null,AVAILABLE,@Spark}
+2021-01-08 18:32:01  [ main:1214 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@5f59185e{/executors,null,AVAILABLE,@Spark}
+2021-01-08 18:32:01  [ main:1214 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@60bdf15d{/executors/json,null,AVAILABLE,@Spark}
+2021-01-08 18:32:01  [ main:1215 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@47da3952{/executors/threadDump,null,AVAILABLE,@Spark}
+2021-01-08 18:32:01  [ main:1215 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@51e4ccb3{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2021-01-08 18:32:01  [ main:1222 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@46e8a539{/static,null,AVAILABLE,@Spark}
+2021-01-08 18:32:01  [ main:1223 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@6e521c1e{/,null,AVAILABLE,@Spark}
+2021-01-08 18:32:01  [ main:1224 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@224b4d61{/api,null,AVAILABLE,@Spark}
+2021-01-08 18:32:01  [ main:1224 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@362a019c{/jobs/job/kill,null,AVAILABLE,@Spark}
+2021-01-08 18:32:01  [ main:1224 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@1d9bec4d{/stages/stage/kill,null,AVAILABLE,@Spark}
+2021-01-08 18:32:01  [ main:1226 ] - [ INFO ]  Bound SparkUI to 0.0.0.0, and started at http://192.168.3.166:4040
+2021-01-08 18:32:01  [ main:1291 ] - [ INFO ]  Starting executor ID driver on host localhost
+2021-01-08 18:32:01  [ main:1349 ] - [ INFO ]  Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 51069.
+2021-01-08 18:32:01  [ main:1349 ] - [ INFO ]  Server created on 192.168.3.166:51069
+2021-01-08 18:32:01  [ main:1351 ] - [ INFO ]  Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2021-01-08 18:32:01  [ main:1373 ] - [ INFO ]  Registering BlockManager BlockManagerId(driver, 192.168.3.166, 51069, None)
+2021-01-08 18:32:01  [ dispatcher-event-loop-10:1377 ] - [ INFO ]  Registering block manager 192.168.3.166:51069 with 2004.6 MB RAM, BlockManagerId(driver, 192.168.3.166, 51069, None)
+2021-01-08 18:32:01  [ main:1379 ] - [ INFO ]  Registered BlockManager BlockManagerId(driver, 192.168.3.166, 51069, None)
+2021-01-08 18:32:01  [ main:1379 ] - [ INFO ]  Initialized BlockManager: BlockManagerId(driver, 192.168.3.166, 51069, None)
+2021-01-08 18:32:02  [ main:1552 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@1ad926d3{/metrics/json,null,AVAILABLE,@Spark}
+2021-01-08 18:32:03  [ main:2971 ] - [ INFO ]  Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/Users/liuwenyi/IdeaProjects/satan/spark-warehouse').
+2021-01-08 18:32:03  [ main:2972 ] - [ INFO ]  Warehouse path is 'file:/Users/liuwenyi/IdeaProjects/satan/spark-warehouse'.
+2021-01-08 18:32:03  [ main:2982 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@6ad179b4{/SQL,null,AVAILABLE,@Spark}
+2021-01-08 18:32:03  [ main:2983 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@2efd2f21{/SQL/json,null,AVAILABLE,@Spark}
+2021-01-08 18:32:03  [ main:2983 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@17d2b075{/SQL/execution,null,AVAILABLE,@Spark}
+2021-01-08 18:32:03  [ main:2984 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@6661d8c0{/SQL/execution/json,null,AVAILABLE,@Spark}
+2021-01-08 18:32:03  [ main:2985 ] - [ INFO ]  Started o.s.j.s.ServletContextHandler@6b2dd3df{/static/sql,null,AVAILABLE,@Spark}
+2021-01-08 18:32:03  [ main:3404 ] - [ INFO ]  Registered StateStoreCoordinator endpoint
+2021-01-08 18:32:04  [ main:3670 ] - [ INFO ]  Code generated in 204.959718 ms
+2021-01-08 18:32:04  [ main:4181 ] - [ INFO ]  Code generated in 15.754204 ms
+2021-01-08 18:32:04  [ main:4199 ] - [ INFO ]  Code generated in 8.803718 ms
+2021-01-08 18:32:04  [ Thread-1:4213 ] - [ INFO ]  Invoking stop() from shutdown hook
+2021-01-08 18:32:04  [ Thread-1:4223 ] - [ INFO ]  Stopped Spark@756cf158{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2021-01-08 18:32:04  [ Thread-1:4224 ] - [ INFO ]  Stopped Spark web UI at http://192.168.3.166:4040
+2021-01-08 18:32:04  [ dispatcher-event-loop-15:4234 ] - [ INFO ]  MapOutputTrackerMasterEndpoint stopped!
+2021-01-08 18:32:04  [ Thread-1:4250 ] - [ INFO ]  MemoryStore cleared
+2021-01-08 18:32:04  [ Thread-1:4250 ] - [ INFO ]  BlockManager stopped
+2021-01-08 18:32:04  [ Thread-1:4260 ] - [ INFO ]  BlockManagerMaster stopped
+2021-01-08 18:32:04  [ dispatcher-event-loop-4:4265 ] - [ INFO ]  OutputCommitCoordinator stopped!
+2021-01-08 18:32:04  [ Thread-1:4272 ] - [ INFO ]  Successfully stopped SparkContext
+2021-01-08 18:32:04  [ Thread-1:4273 ] - [ INFO ]  Shutdown hook called
+2021-01-08 18:32:04  [ Thread-1:4275 ] - [ INFO ]  Deleting directory /private/var/folders/y1/26k_xzzj321fz8xhvjvvdd4c0000gn/T/spark-5c553e2e-72c7-4a80-80f5-a5c5ab47e6a6

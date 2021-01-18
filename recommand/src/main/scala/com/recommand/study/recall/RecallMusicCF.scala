@@ -63,7 +63,7 @@ class RecallMusicCF(spark: SparkSession) {
       df.show()
     } else {
       df.createOrReplaceTempView("music_recall_tmp_table")
-      spark.sql(HiveSql.save_music_recall_table_sql(tableName))
+      spark.sql(HiveSql.save_recall_table_sql(tableName, "music_recall_tmp_table"))
     }
   }
 }
