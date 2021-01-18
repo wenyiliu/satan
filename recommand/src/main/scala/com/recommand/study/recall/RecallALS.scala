@@ -2,7 +2,6 @@ package com.recommand.study.recall
 
 import com.recommand.study.bean.ALSParam
 import com.recommand.study.sql.HiveSql
-import com.recommand.study.util.RecallCFUtils
 import org.apache.spark.ml.evaluation.RegressionEvaluator
 import org.apache.spark.ml.recommendation.{ALS, ALSModel}
 import org.apache.spark.sql.expressions.Window
@@ -14,7 +13,7 @@ import org.apache.spark.sql.{DataFrame, Dataset, Row, SparkSession}
  * @author liuwenyi
  * @date 2021/01/18
  */
-class RecallALS(spark: SparkSession, param: ALSParam) {
+class RecallALS(spark: SparkSession, param: ALSParam) extends BaseRecallCF {
 
   import spark.implicits._
 
@@ -26,7 +25,7 @@ class RecallALS(spark: SparkSession, param: ALSParam) {
   }
 
   def aLSResult(): Unit = {
-    val userMusicFavoriteRateCF = RecallCFUtils.getUserMusicFavoriteRate(spark)
+    val userMusicFavoriteRateCF = getUserMusicFavoriteRate(spark)
     val user_item_rating = transFormIdToInt(userMusicFavoriteRateCF, "userId", "musicId", spark)
     val Array(train, test) = user_item_rating.randomSplit(Array(0.8, 0.2), seed = 1)
     val model = getALSModel(param, train)

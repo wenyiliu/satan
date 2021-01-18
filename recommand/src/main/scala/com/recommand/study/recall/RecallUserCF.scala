@@ -3,7 +3,7 @@ package com.recommand.study.recall
 import breeze.numerics.{pow, sqrt}
 import com.recommand.study.commonenum.RecallCFEnum
 import com.recommand.study.data.HiveDataLoader
-import com.recommand.study.util.{CommonUtils, FunctionUDFUtils, RecallCFUtils}
+import com.recommand.study.util.{CommonUtils, FunctionUDFUtils}
 import org.apache.spark.sql.functions.{col, explode}
 import org.apache.spark.sql.{DataFrame, SparkSession}
 
@@ -13,7 +13,7 @@ import java.time.LocalDate
  * @author liuwenyi
  * @date 2021/01/11
  */
-class RecallUserCF(spark: SparkSession) {
+class RecallUserCF(spark: SparkSession) extends BaseRecallCF {
 
   import spark.implicits._
 
@@ -45,7 +45,7 @@ class RecallUserCF(spark: SparkSession) {
   }
 
   private def getUserItemRecall: DataFrame = {
-    val userMusicFavoriteRate = RecallCFUtils.getUserMusicFavoriteRate(spark)
+    val userMusicFavoriteRate = getUserMusicFavoriteRate(spark)
     userMusicFavoriteRate.cache()
 
     val userRateMolecularDF = getUserRateMolecularDF(userMusicFavoriteRate)
@@ -112,12 +112,12 @@ class RecallUserCF(spark: SparkSession) {
 
       // 调用工具类做关联，降低处理的数据量
       tmpMusicRelatedDF = CommonUtils.join(userMusicFavoriteRateProfile, userMusicFavoriteRateProfileCopy, onColumnArr)
-        .filter(RecallCFUtils.getFilterCondition(RecallCFEnum.userId.toString))
+        .filter(getFilterCondition(RecallCFEnum.userId.toString))
     } else {
       // 不使用聚类，copy 一个用户喜爱程度
       val userMusicFavoriteRateCopy = CommonUtils.copyDF(userMusicFavoriteRate)
       tmpMusicRelatedDF = CommonUtils.join(userMusicFavoriteRate, userMusicFavoriteRateCopy, Array(RecallCFEnum.musicId.toString))
-        .filter(RecallCFUtils.getFilterCondition(RecallCFEnum.userId.toString))
+        .filter(getFilterCondition(RecallCFEnum.userId.toString))
     }
     //    tmpMusicRelatedDF.show(100)
     // 计算 key = userID + userIdCopy + musicId ,value  = favoriteRate * favoriteRateCopy

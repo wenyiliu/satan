@@ -1,14 +1,13 @@
 package com.recommand.study.recall
 
 import com.recommand.study.sql.HiveSql
-import com.recommand.study.util.RecallCFUtils
 import org.apache.spark.sql.SparkSession
 
 /**
  * @author liuwenyi
  * @date 2021/01/13
  */
-class RecallMusicCF(spark: SparkSession) {
+class RecallMusicCF(spark: SparkSession) extends BaseRecallCF {
 
   import spark.implicits._
 
@@ -21,7 +20,7 @@ class RecallMusicCF(spark: SparkSession) {
   }
 
   def getMusicCF(): Unit = {
-    val userMusicFavoriteRate = RecallCFUtils.getUserMusicFavoriteRate(spark)
+    val userMusicFavoriteRate = getUserMusicFavoriteRate(spark)
     userMusicFavoriteRate.createOrReplaceTempView("user_music_favoriteRate_table")
     //    spark.sql("select * from user_music_favoriteRate_table").show(100)
     spark.sql(HiveSql.music_recall_molecular_sql).createOrReplaceTempView("music_2_music_molecular_table")
