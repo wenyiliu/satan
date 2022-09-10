@@ -10,7 +10,8 @@ object AvgSparkCore {
   def main(args: Array[String]): Unit = {
     val conf = new SparkConf().setMaster("local[*]").setAppName("avg")
     val sc = new SparkContext(conf)
-    val avgRdd = sc.textFile("/Users/liuwenyi/IdeaProjects/satan/spark/src/main/scala/test.txt")
+    val avgRdd = sc.textFile("hdfs://NameNodeHACluster/logfile/data/rechargeWithdrawal/2022-07-08/part-1-0")
+    println(avgRdd.count())
     avgRdd.map(line => {
       val lines = line.split(" ")
       if (lines.length < 2) null else (lines(0), lines(1).toDouble)

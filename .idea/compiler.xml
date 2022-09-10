@@ -8,13 +8,21 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hive" />
-        <module name="flink" />
-        <module name="hadoop" />
+        <module name="flink-java" />
         <module name="common" />
         <module name="spark" />
+        <module name="custom-scala" />
+        <module name="kafka" />
+        <module name="custom-java" />
+        <module name="hadoop" />
         <module name="recommand" />
+        <module name="flink-java11" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8" />
+    <bytecodeTargetLevel target="8">
+      <module name="flink" target="8" />
+      <module name="flink-java-11" target="8" />
+      <module name="flink-java-11.2" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

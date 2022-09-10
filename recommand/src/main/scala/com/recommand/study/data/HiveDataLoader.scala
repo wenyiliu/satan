@@ -2,6 +2,7 @@ package com.recommand.study.data
 
 import com.recommand.study.bean.UserListenDetailBean
 import com.recommand.study.sql.HiveSql
+import org.apache.hadoop.hive.ql.exec.spark.session.SparkSession
 import org.apache.spark.sql.{DataFrame, Dataset, SparkSession}
 
 /**
@@ -29,6 +30,7 @@ object HiveDataLoader {
 
   def tableExists(spark: SparkSession, tableName: String): Boolean = {
     val tables = spark.sql(HiveSql.show_tables)
+    tables.rdd.println
     tables.rdd.map(item => item.get(1).toString).filter(name => name.equals(tableName))
       .count() > 0
   }

@@ -1,16 +1,12 @@
 package com.satan.hadoop.mr;
 
-import com.google.common.collect.Lists;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.math.NumberUtils;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.Reducer;
 
 import java.io.IOException;
-import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @author liuwenyi

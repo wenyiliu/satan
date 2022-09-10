@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  * @author liuwenyi
@@ -16,7 +17,7 @@ public class HiveJdbcUtils {
 
     //填写hive的IP，之前在配置文件中配置的IP
 
-    private static String url = "jdbc:hive2://master:10000";
+    private static String url = "jdbc:hive2://hadoop01:10000/test";
 
     private static Connection conn;
 
@@ -40,8 +41,10 @@ public class HiveJdbcUtils {
         PreparedStatement ps = null;
         try {
             ps = conn.prepareStatement(sql);
+            ps.execute();
         } catch (SQLException e) {
             e.printStackTrace();
+            System.out.println(111);
         }
         return ps;
     }
@@ -64,7 +67,18 @@ public class HiveJdbcUtils {
         }
     }
 
-    public static void main(String[] args) {
-        getAll();
+    public static void main(String[] args) throws SQLException {
+//        getAll();
+        String sql = "insert into test.ods_country_code\n" +
+                "values (1, \"1.001\"),\n" +
+                "       (2, \"3321.001\"),\n" +
+                "       (3, \"320\"),\n" +
+                "       (1, \"3.00011\"),\n" +
+                "       (2, \"2.11\"),\n" +
+                "       (3, \"3.11\"),\n" +
+                "       (1, \"1.000\")";
+        Statement stmt = conn.createStatement();
+        stmt.execute(sql);
+//        prepare(conn, sql);
     }
 }

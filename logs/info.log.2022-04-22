@@ -1,0 +1,6 @@
+2022-04-22 23:44:04  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2022-04-22 23:44:04  [ main:849 ] - [ INFO ]  session.id is deprecated. Instead, use dfs.metrics.session-id
+2022-04-22 23:44:04  [ main:851 ] - [ INFO ]  Initializing JVM Metrics with processName=JobTracker, sessionId=
+2022-04-22 23:44:58  [ main:0 ] - [ WARN ]  Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2022-04-22 23:44:59  [ main:344 ] - [ INFO ]  session.id is deprecated. Instead, use dfs.metrics.session-id
+2022-04-22 23:44:59  [ main:345 ] - [ INFO ]  Initializing JVM Metrics with processName=JobTracker, sessionId=

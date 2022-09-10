@@ -16,13 +16,18 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>7</source>
-                    <target>7</target>
+                    <source>8</source>
+                    <target>8</target>
                 </configuration>
             </plugin>
         </plugins>
     </build>
     <dependencies>
+        <dependency>
+            <groupId>com.sensorsdata.analytics.javasdk</groupId>
+            <artifactId>SensorsAnalyticsSDK</artifactId>
+            <version>3.4.2</version>
+        </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
@@ -32,6 +37,11 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>23.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>3.1.0</version>
         </dependency>
     </dependencies>
 

@@ -47,18 +47,26 @@
         <dependency>
             <groupId>org.apache.hive</groupId>
             <artifactId>hive-exec</artifactId>
-            <version>1.2.2</version>
+            <version>2.3.4</version>
         </dependency>
         <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-common</artifactId>
-            <version>2.7.3</version>
+            <version>3.0.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.hive</groupId>
             <artifactId>hive-jdbc</artifactId>
-            <version>1.2.2</version>
+            <version>2.3.4</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.pentaho/pentaho-aggdesigner-algorithm -->
+        <dependency>
+            <groupId>org.pentaho</groupId>
+            <artifactId>pentaho-aggdesigner-algorithm</artifactId>
+            <version>5.1.5-jhyde</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
 </project>

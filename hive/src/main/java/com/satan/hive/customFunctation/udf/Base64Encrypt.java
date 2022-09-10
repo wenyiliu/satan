@@ -17,9 +17,6 @@ public class Base64Encrypt extends UDF {
         }
         String newMessage = null;
         byte[] bt = message.getBytes();
-        if (Objects.isNull(bt)) {
-
-        }
         return null;
     }
 }
