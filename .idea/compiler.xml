@@ -10,8 +10,8 @@
         <module name="hive" />
         <module name="flink-java" />
         <module name="common" />
-        <module name="spark" />
         <module name="custom-scala" />
+        <module name="spark" />
         <module name="kafka" />
         <module name="custom-java" />
         <module name="hadoop" />
@@ -19,10 +19,15 @@
         <module name="flink-java11" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8">
-      <module name="flink" target="8" />
-      <module name="flink-java-11" target="8" />
-      <module name="flink-java-11.2" target="8" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="8" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="flink-java" options="" />
+      <module name="hadoop" options="" />
+      <module name="hive" options="" />
+      <module name="kafka" options="" />
+      <module name="recommand" options="" />
+    </option>
   </component>
 </project>

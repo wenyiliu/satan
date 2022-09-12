@@ -19,7 +19,6 @@
         <module>custom-scala</module>
         <module>flink-java</module>
         <module>flink-java11</module>
-        <module>kafka</module>
     </modules>
 
 </project>

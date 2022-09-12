@@ -43,6 +43,18 @@
             <artifactId>kafka-clients</artifactId>
             <version>3.1.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.alibaba.ververica</groupId>
+            <artifactId>flink-connector-mysql-cdc</artifactId>
+            <version>1.2.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.ververica</groupId>
+            <artifactId>flink-connector-mysql-cdc</artifactId>
+            <version>1.2.0</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
 </project>

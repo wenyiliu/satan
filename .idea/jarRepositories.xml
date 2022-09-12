@@ -12,19 +12,14 @@
       <option name="url" value="http://maven.aliyun.com/nexus/content/groups/public/" />
     </remote-repository>
     <remote-repository>
-      <option name="id" value="nexus" />
-      <option name="name" value="Nexus" />
-      <option name="url" value="http://nexus.bitmartpro.com/repository/maven-public/" />
+      <option name="id" value="com.e-iceblue" />
+      <option name="name" value="e-iceblue" />
+      <option name="url" value="http://114.55.139.96:8081/nexus/content/groups/public/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="scala-tools.org" />
       <option name="name" value="Scala-Tools Maven2 Repository" />
       <option name="url" value="http://nexus.bitmartpro.com/repository/maven-public/" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="cloudera" />
-      <option name="name" value="cloudera" />
-      <option name="url" value="https://repository.cloudera.com/artifactory/cloudera-repos/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="cloudera" />
@@ -42,6 +37,26 @@
       <option name="url" value="https://repo1.maven.org/maven2" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="apache.snapshots" />
+      <option name="name" value="Apache Development Snapshot Repository" />
+      <option name="url" value="http://114.55.139.96:8081/nexus/content/groups/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="nexus" />
+      <option name="name" value="Nexus" />
+      <option name="url" value="http://nexus.bitmartpro.com/repository/maven-public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="central" />
+      <option name="url" value="http://114.55.139.96:8081/nexus/content/groups/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="cloudera" />
+      <option name="name" value="cloudera" />
+      <option name="url" value="https://repository.cloudera.com/artifactory/cloudera-repos/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="central" />
       <option name="name" value="Central Repository" />
       <option name="url" value="http://nexus.bitmartpro.com/repository/maven-public/" />
@@ -50,6 +65,11 @@
       <option name="id" value="jboss.community" />
       <option name="name" value="JBoss Community repository" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="http://114.55.139.96:8081/nexus/content/groups/public/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="com.e-iceblue" />
