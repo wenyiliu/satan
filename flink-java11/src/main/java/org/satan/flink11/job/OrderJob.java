@@ -64,9 +64,7 @@ public class OrderJob {
 
         WindowedStream<Order, Tuple2<String, Integer>, TimeWindow> orderDataWindowedTenSeconds
                 = keyByNameAndType.timeWindow(Time.seconds(10));
-        
-        orderDataWindowedTenSeconds.aggregate(new AggregateFunction<Order, Object, Object>() {
-        })
+
         env.execute("order job");
 
     }

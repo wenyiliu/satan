@@ -8,14 +8,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hive" />
+        <module name="flink-java13" />
         <module name="flink-java" />
-        <module name="common" />
         <module name="custom-scala" />
+        <module name="recommand" />
+        <module name="flink-pubsub" />
+        <module name="common" />
         <module name="spark" />
         <module name="kafka" />
         <module name="custom-java" />
         <module name="hadoop" />
-        <module name="recommand" />
+        <module name="spark-java" />
         <module name="flink-java11" />
       </profile>
     </annotationProcessing>

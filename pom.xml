@@ -19,6 +19,9 @@
         <module>custom-scala</module>
         <module>flink-java</module>
         <module>flink-java11</module>
+        <module>spark-java</module>
+        <module>flink-pubsub</module>
+        <module>flink-java13</module>
     </modules>
 
 </project>

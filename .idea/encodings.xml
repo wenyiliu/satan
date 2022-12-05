@@ -5,6 +5,8 @@
     <file url="file://$PROJECT_DIR$/flink-java/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-java11/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-java11/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/flink-java13/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/flink-java13/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hive/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hive/src/main/resources" charset="UTF-8" />
   </component>

@@ -1,11 +1,12 @@
-package com.satan.flink;
+package com.satan.pubsub;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.satan.flink.entrty.Student;
 import org.apache.flink.api.common.restartstrategy.RestartStrategies;
 import org.apache.flink.api.common.serialization.DeserializationSchema;
 import org.apache.flink.api.common.typeinfo.TypeInformation;
+import org.apache.flink.runtime.state.StateBackend;
+import org.apache.flink.runtime.state.filesystem.FsStateBackend;
 import org.apache.flink.streaming.api.CheckpointingMode;
 import org.apache.flink.streaming.api.TimeCharacteristic;
 import org.apache.flink.streaming.api.environment.CheckpointConfig;
@@ -19,9 +20,9 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author liuwenyi
- * @date 2022/7/27
+ * @date 2022/11/18
  **/
-public class Test {
+public class PubSub {
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         env.setStreamTimeCharacteristic(TimeCharacteristic.EventTime);
@@ -32,7 +33,8 @@ public class Test {
         env.getCheckpointConfig().setMaxConcurrentCheckpoints(6);
         env.getCheckpointConfig().setTolerableCheckpointFailureNumber(2);
         env.getCheckpointConfig().enableExternalizedCheckpoints(CheckpointConfig.ExternalizedCheckpointCleanup.RETAIN_ON_CANCELLATION);
-        env.getCheckpointConfig().setCheckpointStorage("file:////Users/liuwenyi/IdeaProjects/data-flinksql-job/data/ck");
+        StateBackend stateBackend = new FsStateBackend("file:////Users/liuwenyi/IdeaProjects/data-flinksql-job/data/ck");
+        env.setStateBackend(stateBackend);
         DeserializationSchema<JSONObject> messageout = new DeserializationSchema<JSONObject>() {
             private static final long serialVersionUID = 1L;
 

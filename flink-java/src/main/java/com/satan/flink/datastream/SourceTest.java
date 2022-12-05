@@ -1,9 +1,12 @@
 package com.satan.flink.datastream;
 
 import com.satan.flink.datastream.source.ClickSource;
+import com.satan.flink.datastream.source.RandomTest;
 import org.apache.commons.compress.utils.Lists;
 import org.apache.flink.api.common.eventtime.WatermarkStrategy;
+import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.metrics.MetricGroup;
+import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.operators.StreamingRuntimeContext;
@@ -29,9 +32,11 @@ public class SourceTest {
 
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+        DataStreamSource<String> dataStream = env.addSource(new ClickSource());
 
-        DataStreamSource<String> stringDataStreamSource = env.addSource(new ClickSource());
+        DataStreamSource<String> dataStreamSource = env.addSource(new RandomTest());
 
+        dataStream.union(dataStreamSource).print();
 
         env.execute();
     }
